@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI学习网站导航</title>
+    <meta name="description" content="收录主流AI学习网站，帮助用户快速找到优质AI学习资源。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-indigo: #6366F1;
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            --primary-rose: #F43F5E;
+            --primary-orange: #F97316;
+            --primary-amber: #F59E0B;
+            --primary-yellow: #EAB308;
+            --primary-lime: #84CC16;
+            --primary-green: #22C55E;
+            --primary-emerald: #10B981;
+            --primary-teal: #14B8A6;
+            --primary-cyan: #06B6D4;
+            --primary-sky: #0EA5E9;
+            --primary-blue-alt: #2563EB;
+            --primary-indigo-alt: #4F46E5;
+            --primary-purple-alt: #7C3AED;
+            --primary-pink-alt: #DB2777;
+            --primary-rose-alt: #E11D48;
+            --primary-orange-alt: #EA580C;
+            --primary-amber-alt: #D97706;
+            --primary-yellow-alt: #CA8A04;
+            --primary-lime-alt: #65A30D;
+            --primary-green-alt: #16A34A;
+            --primary-emerald-alt: #059669;
+            --primary-teal-alt: #0D9488;
+            --primary-cyan-alt: #0891B2;
+            --primary-sky-alt: #0284C7;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 120px;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .tool-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .tool-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        
+        .tool-card-content {
+            flex: 1;
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .category-header:hover::before {
+            left: 100%;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple), var(--primary-pink));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .floating-animation {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .section-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .tool-card {
+                margin-bottom: 16px;
+            }
+            
+            .section-container {
+                margin: 0 0.5rem;
+            }
+            
+            .category-header {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+            
+            .tool-card {
+                padding: 0.75rem;
+            }
+            
+            .tool-card h3 {
+                font-size: 1rem;
+            }
+            
+            .tool-card p {
+                font-size: 0.8rem;
+            }
+            
+            .tool-logo {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .desktop-menu {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+            
+            .grid {
+                gap: 0.5rem;
+            }
+            
+            .tool-card {
+                padding: 0.5rem;
+            }
+            
+            .tool-card h3 {
+                font-size: 0.9rem;
+            }
+            
+            .tool-card p {
+                font-size: 0.75rem;
+            }
+            
+            .tool-logo {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+            }
+        }
+        
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu-button {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+        }
+        
+        .mobile-menu-button span {
+            width: 100%;
+            height: 3px;
+            background: #3B82F6;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-button.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .mobile-menu-button.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-button.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 40;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-content {
+            padding: 5rem 2rem 2rem;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #374151;
+            border-bottom: 1px solid #E5E7EB;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover {
+            color: #3B82F6;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px) scale(0.95); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <a href="https://www.seodog.cn" target="_blank" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white font-bold text-lg">AI</span>
+                        </div>
+                    </a>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        AI学习网站导航
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-4 desktop-menu">
+                    <a href="https://www.seodog.cn" class="text-blue-600 hover:underline text-sm font-semibold">首页</a>
+                    <a href="img.html" class="text-blue-600 hover:underline text-sm font-semibold">AI图片</a>
+
+                    <a href="words.html" class="text-blue-600 hover:underline text-sm font-semibold">AI文字</a>
+                    <a href="chuhai.html" class="text-blue-600 hover:underline text-sm font-semibold">AI出海</a>
+                    <a href="music.html" class="text-blue-600 hover:underline text-sm font-semibold">AI音乐</a>
+                    <a href="designer.html" class="text-blue-600 hover:underline text-sm font-semibold">AI设计师</a>
+                    <a href="ainum.html" class="text-blue-600 hover:underline text-sm font-semibold">AI数字人</a>
+                    <a href="aiprompt.html" class="text-blue-600 hover:underline text-sm font-semibold">AI提示词</a>
+                    <a href="ailearn.html" class="text-blue-600 hover:underline text-sm font-semibold">AI学习</a>
+                    <a href="aioffice.html" class="text-blue-600 hover:underline text-sm font-semibold">AI办公</a>
+                    <a href="aiagent.html" class="text-blue-600 hover:underline text-sm font-semibold">AI智能体</a>
+                    <a href="aitimer.html" class="text-blue-600 hover:underline text-sm font-semibold">AI计时器</a>
+                    <a href="aicommunity.html" class="text-blue-600 hover:underline text-sm font-semibold">AI社群</a>
+                    <a href="sitemap.html" class="text-blue-600 hover:underline text-sm font-semibold">网站地图</a>
+                </div>
+                <button class="mobile-menu-button md:hidden" id="mobileMenuButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-content">
+            <a href="https://www.seodog.cn" onclick="closeMobileMenu()">首页</a>
+                          <a href="img.html" onclick="closeMobileMenu()">AI图片</a>
+              
+              <a href="words.html" onclick="closeMobileMenu()">AI文字</a>
+              <a href="chuhai.html" onclick="closeMobileMenu()">AI出海</a>
+            <a href="music.html" onclick="closeMobileMenu()">AI音乐</a>
+            <a href="designer.html" onclick="closeMobileMenu()">AI设计师</a>
+            <a href="ainum.html" onclick="closeMobileMenu()">AI数字人</a>
+            <a href="aiprompt.html" onclick="closeMobileMenu()">AI提示词</a>
+            <a href="ailearn.html" onclick="closeMobileMenu()">AI学习</a>
+            <a href="aioffice.html" onclick="closeMobileMenu()">AI办公</a>
+                          <a href="aiagent.html" onclick="closeMobileMenu()">AI智能体</a>
+              <a href="aitimer.html" onclick="closeMobileMenu()">AI计时器</a>
+            <a href="aicommunity.html" onclick="closeMobileMenu()">AI社群</a>
+            <a href="sitemap.html" onclick="closeMobileMenu()">网站地图</a>
+        </div>
+    </nav>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-8 fade-in">
+            <div class="section-container overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">📚 主流AI学习网站</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
+                    <a href="https://www.deeplearning.ai/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">DeepLearning.AI</h3>
+                        <p class="text-gray-600 text-sm">吴恩达创办，全球知名AI学习平台。</p>
+                    </a>
+                    <a href="https://www.coursera.org/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Coursera</h3>
+                        <p class="text-gray-600 text-sm">全球最大在线课程平台，涵盖AI、机器学习等。</p>
+                    </a>
+                    <a href="https://www.kaggle.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Kaggle</h3>
+                        <p class="text-gray-600 text-sm">数据科学与AI竞赛社区，丰富的学习资源。</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 移动端菜单功能
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileNav = document.getElementById('mobileNav');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            mobileMenuButton.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            mobileMenuButton.classList.remove('active');
+            mobileNav.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // 点击菜单外部关闭菜单
+        mobileNav.addEventListener('click', function(e) {
+            if (e.target === mobileNav) {
+                closeMobileMenu();
+            }
+        });
+
+        // 监听窗口大小变化，在大屏幕时关闭移动菜单
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html> 

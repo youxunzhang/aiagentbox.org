@@ -1,0 +1,186 @@
+0709
+
+1.把出海站里面的19个链接，放到首页“友情链接”新建友情链接板块
+
+
+1.航海页面增加阿里云  https://wanwang.aliyun.com/
+  航海页面增加https://x.com/home
+航海页面增加https://www.instagram.com/
+  航海页面增加 趋势英国 https://trends.google.com/trending?geo=GB&category=6&hours=168
+   航海页面增加 趋势法国 https://trends.google.com/trending?geo=FR&category=6&hours=168
+  航海页面增加 趋势美国 https://trends.google.com/trending?geo=US&hl=zh-CN&category=6
+
+航海页面增加 https://www.facebook.com/
+
+
+
+出海站内容清空
+改为如下链接并对应网站名称
+
+https://www.babypodcast.pro/blog
+
+狗狗全天玩耍时间
+
+毛毛妈咪
+http://www.furmummy.com.sg › 狗狗护理 › 日托
+新加坡最佳狗狗日托——提供日托套餐。每天两次户外散步。最大的室内游乐区。空调房间。全天玩耍。乐趣无穷…
+
+
+
+https://www.iloveimg.com/zh-cn
+
+https://www.ghibli-gpt.com/
+
+
+https://gamemonetize.com/
+
+
+monetag.com 
+
+每个网站加一个游戏的外链
+
+
+游戏美术 https://holopix.cn/
+
+
+2.游戏页面增加 https://www.rockstargames.com/reddeadredemption2
+
+游戏页面增加 https://www.garena.tw/
+游戏页面增加 https://supercell.com/en/games/brawlstars/
+游戏页面增加  nhttps://www.nytimes.com/
+游戏页面增加https://www.nytimes.com/
+游戏页面增加 https://supercell.com/en/
+游戏页面增加 chess https://www.chess.com/
+游戏页面增加 https://www.eurogamer.net/
+https://store.playstation.com/
+https://www.nytimes.com/games/wordle/index.html
+https://wordly.org/
+
+游戏页面增加游戏资讯网站板块
+增加 https://sea.ign.com/
+https://brawlstars.fandom.com/
+
+3.增加赚钱的网站页面
+
+
+
+之前
+
+
+
+大模型
+
+
+豆包 https://www.doubao.com/chat/
+Deepseek https://chat.deepseek.com/
+谷歌gemini https://gemini.google.com/app
+朱雀大模型检测 https://matrix.tencent.com/ai-detect/ 
+perplexity https://www.perplexity.ai/
+Grok  https://x.ai/ https://grok.com/
+Claude https://claude.ai/download Claude
+AI导航 https://aigc.izzi.cn/ 
+
+
+图片处理
+
+
+无版权网站 https://pixabay.com/
+即梦国际版 https://dreamina.capcut.com/ai-tool/home/ 
+图片提示词 https://lexica.art/ 
+
+视频处理
+heygen https://app.heygen.com/
+剪映国际版 https://www.capcut.cn/  
+
+海螺 https://hailuoai.com/ 
+
+pika https://pika.art/about 
+
+即梦 https://jimeng.jianying.com/ 
+
+可灵 https://app.klingai.com/cn/ 
+
+runway https://runwayml.com/ 
+
+智能体
+
+
+声音处理
+Fish audio 配音工具  
+https://fish.audio/
+https://ttsmaker.cn/
+https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643
+
+编程
+cursor https://www.cursor.com/cn 
+windsurf https://windsurf.com/ 
+https://code.visualstudio.com/Download
+https://agent.minimax.io/
+https://bolt.new/
+https://carrd.co/ 单页网站
+https://tailwindcss.com/ 网站生成
+https://template.typeform.com/to/zDzdJ3Me 待支付的调查问卷
+
+社交媒体
+
+
+热点查询 https://felo.ai/search 
+
+其他常用
+
+
+小红书卡片 https://md2card.com/ 
+视频下载 https://dlpanda.com/zh-CN/xiaohongshu 
+PPT生成 gamma.app
+网站出海 https://scys.com/articleDetail/xq_topic/8852585812152582
+巧思胜苦干 https://notebooklm.google/  
+个人开发者 https://jeannen.com/ 
+海外新产品发布的圣地 https://www.producthunt.com/  
+YC https://news.ycombinator.com/show  
+每个月最赚钱的Top 100产品 https://seo.box/referring/ 
+AI产品导航网站 https://www.toolify.ai/zh/  
+AI产品导航网站 https://theresanaiforthat.com/ 
+GPT商店 https://www.gptshunter.com/ 
+临时邮件网站 https://temp-mail.org/zh/  
+https://www.trae.com.cn/
+国内多模型 https://docs.cherry-ai.com/ 
+ 
+
+
+| 用 AI Rapper 科普，还有大机会（抖音已经有单月粘粉 45万的案例）
+近三个月，“用Rap唱科普”引发了知识科普赛道的创作热潮。以“抽象科普”为代表，我陆续刷到了“老舅唱科普”“企鹅说唱”“一首歌的整活”等科普账号，不少新人创作者发布的第一条说唱科普短视频就爆了，有的账号还上了商品橱窗，直接推广书籍带货。
+
+核心玩法：​​ 用AI工具（像DeepSeek写词、Mureka/海绵音乐作曲、即梦做图）快速生成“科普知识+魔性说唱”的短视频，发抖音。把枯燥知识变成洗脑Rap，网友爱看爱学爱转发，涨粉飞快。
+
+粉丝起来后，主要靠 ​​挂商品橱窗卖书​​（参考“胡晓闲”卖科普书1万多件），也有教别人做这种视频收学费的。
+
+可以下面方法操作：
+​
+​找知识点​​（生活常识、历史、生物都行）
+​​让AI写押韵歌词​​（注意别太专业，要好玩）
+​​AI生成说唱旋律​​（中文用Mureka、海绵音乐顺手）
+​​找/做简单画面​​（网上扒图或AI生成）
+​​剪辑发布，坐等流量
+
+
+
+
+
+https://btr2ioqltz.feishu.cn/docx/MbZvdSu3loOi7gxUasVckMcBni4
+
+
+
+音乐与音轨分离
+https://mvsep.com/zh/home
+
+
+音频剪辑
+https://vocalremover.org/zh/cutter
+
+
+
+freeconvert
+https://www.freeconvert.com/zh/mp3-to-wav
+
+
+

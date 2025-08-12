@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社交媒体 - AI工具导航 | 社交媒体平台集合</title>
+    <meta name="description" content="AI工具导航社交媒体页面，收录最热门的社交媒体平台，包括Spotify、Instagram、TikTok、Twitter、Facebook等，帮助您快速访问各种社交媒体平台">
+    <meta name="keywords" content="社交媒体,Spotify,Instagram,TikTok,Twitter,Facebook,社交平台,AI工具导航">
+    <meta name="author" content="AI工具导航">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="社交媒体 - AI工具导航">
+    <meta property="og:description" content="AI工具导航社交媒体页面，收录最热门的社交媒体平台">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seodog.cn/social.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="社交媒体 - AI工具导航">
+    <meta name="twitter:description" content="AI工具导航社交媒体页面，收录最热门的社交媒体平台">
+    <link rel="canonical" href="https://www.seodog.cn/social.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "社交媒体",
+        "description": "AI工具导航社交媒体页面，收录最热门的社交媒体平台",
+        "url": "https://www.seodog.cn/social.html"
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-indigo: #6366F1;
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            --primary-rose: #F43F5E;
+            --primary-orange: #F97316;
+            --primary-amber: #F59E0B;
+            --primary-yellow: #EAB308;
+            --primary-lime: #84CC16;
+            --primary-green: #22C55E;
+            --primary-emerald: #10B981;
+            --primary-teal: #14B8A6;
+            --primary-cyan: #06B6D4;
+            --primary-sky: #0EA5E9;
+            --primary-blue-alt: #2563EB;
+            --primary-indigo-alt: #4F46E5;
+            --primary-purple-alt: #7C3AED;
+            --primary-pink-alt: #DB2777;
+            --primary-rose-alt: #E11D48;
+            --primary-orange-alt: #EA580C;
+            --primary-amber-alt: #D97706;
+            --primary-yellow-alt: #CA8A04;
+            --primary-lime-alt: #65A30D;
+            --primary-green-alt: #16A34A;
+            --primary-emerald-alt: #059669;
+            --primary-teal-alt: #0D9488;
+            --primary-cyan-alt: #0891B2;
+            --primary-sky-alt: #0284C7;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 120px;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .tool-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .tool-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        
+        .tool-card-content {
+            flex: 1;
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-amber));
+            color: white;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .category-header:hover::before {
+            left: 100%;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple), var(--primary-pink));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1001;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .mobile-nav-content a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav-content a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .mobile-menu-button {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        .mobile-menu-button span {
+            width: 24px;
+            height: 3px;
+            background: var(--gray-800);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-button.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .mobile-menu-button.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-button.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        /* Social Media Specific Colors */
+        .social-spotify { background: linear-gradient(135deg, #1DB954, #1ED760); }
+        .social-instagram { background: linear-gradient(135deg, #E4405F, #C13584); }
+        .social-tiktok { background: linear-gradient(135deg, #000000, #25F4EE); }
+        .social-twitter { background: linear-gradient(135deg, #1DA1F2, #0D8BD9); }
+        .social-facebook { background: linear-gradient(135deg, #1877F2, #0D6EFD); }
+        .social-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+        .social-linkedin { background: linear-gradient(135deg, #0077B5, #005885); }
+        .social-reddit { background: linear-gradient(135deg, #FF4500, #FF6B35); }
+        .social-discord { background: linear-gradient(135deg, #5865F2, #4752C4); }
+        .social-telegram { background: linear-gradient(135deg, #0088CC, #0077B3); }
+        .social-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .social-wechat { background: linear-gradient(135deg, #07C160, #06AD56); }
+        .social-weibo { background: linear-gradient(135deg, #E6162D, #C41230); }
+        .social-qq { background: linear-gradient(135deg, #12B7F5, #0EA5E9); }
+        .social-bilibili { background: linear-gradient(135deg, #00A1D6, #0091C2); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass-effect">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.seodog.cn" class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">AI</span>
+                        </div>
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            AI工具导航
+                        </h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4 desktop-menu">
+                    <a href="https://www.seodog.cn" class="text-blue-600 hover:underline text-sm font-semibold">首页</a>
+                    <a href="img.html" class="text-blue-600 hover:underline text-sm font-semibold">AI图片</a>
+
+                    <a href="words.html" class="text-blue-600 hover:underline text-sm font-semibold">AI文字</a>
+                    <a href="chuhai.html" class="text-blue-600 hover:underline text-sm font-semibold">AI出海</a>
+                    <a href="music.html" class="text-blue-600 hover:underline text-sm font-semibold">AI音乐</a>
+                    <a href="designer.html" class="text-blue-600 hover:underline text-sm font-semibold">AI设计师</a>
+                    <a href="ainum.html" class="text-blue-600 hover:underline text-sm font-semibold">AI数字人</a>
+                    <a href="aiprompt.html" class="text-blue-600 hover:underline text-sm font-semibold">AI提示词</a>
+                    <a href="ailearn.html" class="text-blue-600 hover:underline text-sm font-semibold">AI学习</a>
+                    <a href="aioffice.html" class="text-blue-600 hover:underline text-sm font-semibold">AI办公</a>
+                    <a href="aiagent.html" class="text-blue-600 hover:underline text-sm font-semibold">AI智能体</a>
+                    <a href="aitimer.html" class="text-blue-600 hover:underline text-sm font-semibold">AI计时器</a>
+                    <a href="aicommunity.html" class="text-blue-600 hover:underline text-sm font-semibold">AI社群</a>
+                    <a href="social.html" class="text-blue-600 hover:underline text-sm font-semibold">社交媒体</a>
+                    <a href="sitemap.html" class="text-blue-600 hover:underline text-sm font-semibold">网站地图</a>
+                </div>
+                <button class="mobile-menu-button md:hidden" id="mobileMenuButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-content">
+            <a href="https://www.seodog.cn" onclick="closeMobileMenu()">首页</a>
+                          <a href="img.html" onclick="closeMobileMenu()">AI图片</a>
+              
+              <a href="words.html" onclick="closeMobileMenu()">AI文字</a>
+              <a href="chuhai.html" onclick="closeMobileMenu()">AI出海</a>
+            <a href="music.html" onclick="closeMobileMenu()">AI音乐</a>
+            <a href="designer.html" onclick="closeMobileMenu()">AI设计师</a>
+            <a href="ainum.html" onclick="closeMobileMenu()">AI数字人</a>
+            <a href="aiprompt.html" onclick="closeMobileMenu()">AI提示词</a>
+            <a href="ailearn.html" onclick="closeMobileMenu()">AI学习</a>
+            <a href="aioffice.html" onclick="closeMobileMenu()">AI办公</a>
+                          <a href="aiagent.html" onclick="closeMobileMenu()">AI智能体</a>
+              <a href="aitimer.html" onclick="closeMobileMenu()">AI计时器</a>
+            <a href="aicommunity.html" onclick="closeMobileMenu()">AI社群</a>
+            <a href="social.html" onclick="closeMobileMenu()">社交媒体</a>
+            <a href="sitemap.html" onclick="closeMobileMenu()">网站地图</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-12 mb-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="gradient-text text-5xl md:text-7xl font-bold mb-4 leading-tight">
+                社交媒体
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-2 max-w-3xl mx-auto font-light">
+                连接世界，分享生活
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-16" role="main">
+        <article>
+            <header>
+                <h2 class="sr-only">社交媒体平台集合</h2>
+            </header>
+
+            <!-- 主流社交媒体 -->
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                        🌟 主流社交媒体
+                    </h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
+                        <a href="https://www.spotify.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-spotify">🎵</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Spotify</h3>
+                                    <p class="text-gray-600 text-sm">全球最大音乐流媒体平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-instagram">📷</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Instagram</h3>
+                                    <p class="text-gray-600 text-sm">图片和视频分享社交平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.tiktok.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-tiktok">🎬</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">TikTok</h3>
+                                    <p class="text-gray-600 text-sm">短视频社交平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://twitter.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-twitter">🐦</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Twitter</h3>
+                                    <p class="text-gray-600 text-sm">微博客社交平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.facebook.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-facebook">📘</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Facebook</h3>
+                                    <p class="text-gray-600 text-sm">全球最大社交网络</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 视频平台 -->
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                        🎥 视频平台
+                    </h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
+                        <a href="https://www.youtube.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-youtube">📺</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">YouTube</h3>
+                                    <p class="text-gray-600 text-sm">全球最大视频分享平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.bilibili.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-bilibili">📺</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">哔哩哔哩</h3>
+                                    <p class="text-gray-600 text-sm">中国领先视频网站</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.douyin.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-tiktok">🎵</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">抖音</h3>
+                                    <p class="text-gray-600 text-sm">中国短视频平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.kuaishou.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B35, #F7931E);">⚡</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">快手</h3>
+                                    <p class="text-gray-600 text-sm">记录生活分享快乐</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.xiaohongshu.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #FF2442, #FF6B9D);">📖</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">小红书</h3>
+                                    <p class="text-gray-600 text-sm">生活方式分享平台</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 即时通讯 -->
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                        💬 即时通讯
+                    </h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
+                        <a href="https://web.whatsapp.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-whatsapp">💬</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">WhatsApp</h3>
+                                    <p class="text-gray-600 text-sm">全球即时通讯应用</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://web.telegram.org/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-telegram">✈️</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Telegram</h3>
+                                    <p class="text-gray-600 text-sm">安全即时通讯平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://discord.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-discord">🎮</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Discord</h3>
+                                    <p class="text-gray-600 text-sm">游戏社区通讯平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.wechat.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-wechat">💚</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">微信</h3>
+                                    <p class="text-gray-600 text-sm">中国主流社交应用</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://im.qq.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-qq">🐧</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">QQ</h3>
+                                    <p class="text-gray-600 text-sm">腾讯即时通讯工具</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 专业社交 -->
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                        💼 专业社交
+                    </h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
+                        <a href="https://www.linkedin.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-linkedin">💼</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">LinkedIn</h3>
+                                    <p class="text-gray-600 text-sm">全球职业社交网络</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.reddit.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-reddit">🤖</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Reddit</h3>
+                                    <p class="text-gray-600 text-sm">全球最大社区论坛</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://weibo.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-weibo">📱</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">微博</h3>
+                                    <p class="text-gray-600 text-sm">中国主流微博平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.zhihu.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #0084FF, #00A1F1);">❓</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">知乎</h3>
+                                    <p class="text-gray-600 text-sm">中国知识分享平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.douban.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #00B51D, #00A1F1);">📚</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">豆瓣</h3>
+                                    <p class="text-gray-600 text-sm">文艺青年聚集地</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 音乐平台 -->
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                        🎵 音乐平台
+                    </h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
+                        <a href="https://music.163.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #C20C0C, #E60012);">🎵</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">网易云音乐</h3>
+                                    <p class="text-gray-600 text-sm">中国领先音乐平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://y.qq.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #31C27C, #2C9E6A);">🎵</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">QQ音乐</h3>
+                                    <p class="text-gray-600 text-sm">腾讯音乐娱乐平台</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.apple.com/apple-music/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #FA243C, #E60012);">🍎</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">Apple Music</h3>
+                                    <p class="text-gray-600 text-sm">苹果音乐服务</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://music.youtube.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo social-youtube">🎵</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">YouTube Music</h3>
+                                    <p class="text-gray-600 text-sm">YouTube音乐服务</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.xiami.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                            <div class="tool-card-header">
+                                <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B35, #F7931E);">🎵</div>
+                                <div class="tool-card-content">
+                                    <h3 class="font-semibold text-lg mb-2">虾米音乐</h3>
+                                    <p class="text-gray-600 text-sm">阿里音乐平台</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">AI工具导航</h3>
+                    <p class="text-gray-400 text-sm">
+                        最全面的人工智能工具集合，帮助您快速找到最适合的AI助手和工具。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">快速链接</h4>
+                    <nav class="text-xs text-gray-400" aria-label="网站导航">
+                        <ul class="space-y-2">
+                            <li><a href="https://www.seodog.cn" class="hover:text-white transition-colors">首页</a></li>
+                            <li><a href="chuhai.html" class="hover:text-white transition-colors">AI出海</a></li>
+                            <li><a href="game.html" class="hover:text-white transition-colors">游戏</a></li>
+                            <li><a href="social.html" class="hover:text-white transition-colors">社交媒体</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">AI工具</h4>
+                    <nav class="text-xs text-gray-400" aria-label="AI工具导航">
+                        <ul class="space-y-2">
+                            <li><a href="words.html" class="hover:text-white transition-colors">AI文字</a></li>
+                            <li><a href="img.html" class="hover:text-white transition-colors">AI图片</a></li>
+                            <li><a href="music.html" class="hover:text-white transition-colors">AI音乐</a></li>
+                            <li><a href="designer.html" class="hover:text-white transition-colors">AI设计师</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">联系我们</h4>
+                    <p class="text-gray-400 text-sm">
+                        如有问题或建议，欢迎联系我们。
+                    </p>
+                    <div class="mt-4">
+                        <a href="sitemap.html" class="text-blue-400 hover:text-blue-300 text-sm">网站地图</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 AI工具导航. 保留所有权利.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileNav = document.getElementById('mobileNav');
+        const body = document.body;
+
+        function toggleMobileMenu() {
+            mobileMenuButton.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            mobileMenuButton.classList.remove('active');
+            mobileNav.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuButton.contains(event.target) && !mobileNav.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // Fade in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 

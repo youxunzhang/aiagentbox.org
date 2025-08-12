@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI社群 - 加入AI技术交流社区</title>
+    <meta name="description" content="加入AI社群，与AI技术爱好者交流学习，分享最新AI工具和应用。">
+    <meta name="keywords" content="AI社群,AI社区,AI技术交流,AI学习群,人工智能社群">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-indigo: #6366F1;
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            --primary-rose: #F43F5E;
+            --primary-orange: #F97316;
+            --primary-amber: #F59E0B;
+            --primary-yellow: #EAB308;
+            --primary-lime: #84CC16;
+            --primary-green: #22C55E;
+            --primary-emerald: #10B981;
+            --primary-teal: #14B8A6;
+            --primary-cyan: #06B6D4;
+            --primary-sky: #0EA5E9;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .community-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .community-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .community-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .community-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            border: 2px solid #ddd;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 0.875rem;
+            color: #666;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .qr-code::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background: #000;
+            border-radius: 8px;
+            transform: translate(-50%, -50%);
+        }
+        
+        .qr-code::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 4px;
+            transform: translate(-50%, -50%);
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .category-header:hover::before {
+            left: 100%;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple), var(--primary-pink));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .section-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px) scale(0.95); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .community-card {
+                margin-bottom: 16px;
+            }
+            
+            .section-container {
+                margin: 0 0.5rem;
+            }
+            
+            .category-header {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+            
+            .qr-code {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <a href="https://www.seodog.cn" target="_blank" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white font-bold text-lg">AI</span>
+                        </div>
+                    </a>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        AI社群
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://www.seodog.cn" class="text-blue-600 hover:underline text-sm font-semibold">首页</a>
+                    <a href="img.html" class="text-blue-600 hover:underline text-sm font-semibold">AI图片</a>
+
+                    <a href="words.html" class="text-blue-600 hover:underline text-sm font-semibold">AI文字</a>
+                    <a href="chuhai.html" class="text-blue-600 hover:underline text-sm font-semibold">AI出海</a>
+                    <a href="music.html" class="text-blue-600 hover:underline text-sm font-semibold">AI音乐</a>
+                    <a href="designer.html" class="text-blue-600 hover:underline text-sm font-semibold">AI设计师</a>
+                    <a href="ainum.html" class="text-blue-600 hover:underline text-sm font-semibold">AI数字人</a>
+                    <a href="aiprompt.html" class="text-blue-600 hover:underline text-sm font-semibold">AI提示词</a>
+                    <a href="ailearn.html" class="text-blue-600 hover:underline text-sm font-semibold">AI学习</a>
+                    <a href="aioffice.html" class="text-blue-600 hover:underline text-sm font-semibold">AI办公</a>
+                    <a href="aiagent.html" class="text-blue-600 hover:underline text-sm font-semibold">AI智能体</a>
+                    <a href="aitimer.html" class="text-blue-600 hover:underline text-sm font-semibold">AI计时器</a>
+                    <a href="aicommunity.html" class="text-blue-600 hover:underline text-sm font-semibold">AI社群</a>
+                    <a href="sitemap.html" class="text-blue-600 hover:underline text-sm font-semibold">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 mb-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="gradient-text text-5xl md:text-7xl font-bold mb-4 leading-tight">
+                AI社群
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-2 max-w-3xl mx-auto font-light">
+                加入AI技术交流社区，与志同道合的朋友一起探索AI的未来
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-16">
+        <!-- 社群介绍 -->
+        <section class="mb-16 fade-in">
+            <div class="section-container overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                    🤝 社群介绍
+                </h2>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="community-card p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">🎯 社群宗旨</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    我们致力于打造一个开放、包容的AI技术交流平台，汇聚全球AI爱好者和专业人士，
+                                    共同探讨AI技术的最新发展，分享实用的AI工具和应用经验。
+                                </p>
+                            </div>
+                            
+                            <div class="community-card p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">🌟 社群特色</h3>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• 实时分享最新AI工具和资源</li>
+                                    <li>• 定期举办技术讨论和分享会</li>
+                                    <li>• 提供AI学习和实践指导</li>
+                                    <li>• 连接AI行业专业人士</li>
+                                    <li>• 支持项目合作和创业交流</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="community-card p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">📈 社群规模</h3>
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <div class="bg-blue-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-blue-600">5000+</div>
+                                        <div class="text-sm text-gray-600">活跃成员</div>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-green-600">100+</div>
+                                        <div class="text-sm text-gray-600">每日讨论</div>
+                                    </div>
+                                    <div class="bg-purple-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-purple-600">50+</div>
+                                        <div class="text-sm text-gray-600">专家顾问</div>
+                                    </div>
+                                    <div class="bg-orange-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-orange-600">24/7</div>
+                                        <div class="text-sm text-gray-600">在线支持</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="community-card p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">🎓 适合人群</h3>
+                                <div class="text-gray-600 space-y-2">
+                                    <p>• AI技术爱好者和学习者</p>
+                                    <p>• 程序员和开发者</p>
+                                    <p>• 产品经理和设计师</p>
+                                    <p>• 创业者和企业管理者</p>
+                                    <p>• 学生和研究人员</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 加入社群 -->
+        <section class="mb-16 fade-in">
+            <div class="section-container overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                    📱 加入社群
+                </h2>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- 微信群 -->
+                        <div class="community-card p-6 text-center">
+                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl">💬</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">微信群</h3>
+                            <p class="text-gray-600 mb-4">主要交流群，实时讨论AI技术和工具</p>
+                            <div class="qr-code mb-4">
+                                <span>扫码加入微信群</span>
+                            </div>
+                            <p class="text-sm text-gray-500">群号：AI-Tech-2024</p>
+                        </div>
+                        
+                        <!-- QQ群 -->
+                        <div class="community-card p-6 text-center">
+                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl">🐧</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">QQ群</h3>
+                            <p class="text-gray-600 mb-4">技术交流群，分享学习资源和项目经验</p>
+                            <div class="qr-code mb-4">
+                                <span>扫码加入QQ群</span>
+                            </div>
+                            <p class="text-sm text-gray-500">群号：123456789</p>
+                        </div>
+                        
+                        <!-- Discord -->
+                        <div class="community-card p-6 text-center">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl">🎮</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Discord</h3>
+                            <p class="text-gray-600 mb-4">国际化交流平台，连接全球AI爱好者</p>
+                            <div class="qr-code mb-4">
+                                <span>扫码加入Discord</span>
+                            </div>
+                            <p class="text-sm text-gray-500">频道：AI-Community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社群规则 -->
+        <section class="mb-16 fade-in">
+            <div class="section-container overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                    📋 社群规则
+                </h2>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">✅ 鼓励行为</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 分享有价值的AI工具和资源</li>
+                                <li>• 积极回答其他成员的问题</li>
+                                <li>• 参与技术讨论和知识分享</li>
+                                <li>• 尊重他人，友善交流</li>
+                                <li>• 遵守群规，维护良好氛围</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">❌ 禁止行为</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 发布广告和垃圾信息</li>
+                                <li>• 恶意攻击和人身攻击</li>
+                                <li>• 传播虚假信息和谣言</li>
+                                <li>• 发布违法违规内容</li>
+                                <li>• 频繁刷屏和干扰他人</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section class="mb-16 fade-in">
+            <div class="section-container overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 rounded-t-2xl mb-0">
+                    📞 联系我们
+                </h2>
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="community-card p-6 text-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white">📱</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">微信</h3>
+                            <p class="text-gray-600">zhangyouxun2013</p>
+                        </div>
+                        
+                        <div class="community-card p-6 text-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white">📧</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">邮箱</h3>
+                            <p class="text-gray-600">contact@seodog.cn</p>
+                        </div>
+                        
+                        <div class="community-card p-6 text-center">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white">🌐</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">网站</h3>
+                            <p class="text-gray-600">www.seodog.cn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-md">
+                    <span class="text-white font-bold text-sm">AI</span>
+                </div>
+                <span class="text-xl font-semibold">AI社群</span>
+            </div>
+            <p class="text-gray-600 mb-4">加入AI技术交流社区，与志同道合的朋友一起探索AI的未来</p>
+            <p class="text-sm text-gray-500">© 2024 AI社群. 联系我们 wx zhangyouxun2013</p>
+        </div>
+    </footer>
+</body>
+</html> 

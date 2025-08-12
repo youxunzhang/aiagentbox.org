@@ -1,0 +1,77 @@
+Domain	Founder	Affiliate	DR	Min Price	Traffic Est.	AI Long 2 Short 	AI Faceless	AI Actors
+capcut.com			81	$9.99 / mo	-	TRUE		
+invideo.io		https://invideo.io/make/affiliate-program/	84	$20 / mo / 50 mins	1400000		TRUE	
+vidnoz.com	https://x.com/IamLenaZhang		71	$20 / mo / 15 mins	1400000			TRUE
+descript.com	https://x.com/andrewmason	https://www.descript.com/affiliate	80	$24 / mo / 30 transcripts	930000	TRUE		
+heygen.com	https://x.com/joshua_xu_	https://www.heygen.com/affiliate-program	75	$24 / mo / 3 avatars	626800			TRUE
+captions.ai	https://x.com/_jasonsilberman	https://sendshort.ai/affiliate	63	$15 / mo / 100 shorts	609000	TRUE		
+veed.io	https://x.com/sab8a		82	$29 / mo / limits per ft	520000	TRUE	TRUE	TRUE
+fliki.ai	https://x.com/isabirahmed	https://fliki.ai/resources/affiliate-program	73	$21 / mo / 2160 minutes / y 	228000		TRUE	
+steve.ai		https://www.steve.ai/affiliate	61	$45 / mo / 15 videos / mo	136000			
+2short.ai	https://x.com/samjasik		47	$19.9 / 15hrs	130000	TRUE		
+flexclip.com		https://www.flexclip.com/affiliates.html	77	$20 / mo	125000			
+ssemble.com		https://www.ssemble.com/ssemble-affiliate-program	55	$9 / mo / 360 videos	97900	TRUE		
+opus.pro	https://x.com/opusyoung	https://www.opus.pro/affiliate	71	$29 / mo / 300 minutes	89000	TRUE		
+powder.gg			42	-	59600	TRUE		
+getmunch.com		https://www.getmunch.com/partnership	60	?	49000	TRUE		
+klap.app	https://x.com/deletethistheo	https://klap.app/affiliate	51	$29 / mo / 100 clips	35300	TRUE		
+crayo.ai	https://x.com/danvsI	https://crayo.tolt.io/login	42	$39 / mo / 2hrs	24500		TRUE	
+autocut.com		https://www.autocut.com/en/affiliates/	24	$20 / mo	21700	TRUE		
+vizard.ai		https://vizard.ai/affiliate	52	$20 / mo / 1.2k mins	20400	TRUE		
+vidyo.ai		https://vidyo.ai/affiliate-program	65	$41 / mo / 300 mins	19400	TRUE		
+vmaker.com			63	$33 / mo / 30 videos	15900			
+submagic.co	https://x.com/elieln_	https://www.submagic.co/affiliate	58	$34 / mo	13800	TRUE		
+framedrop.ai		https://framedrop.getrewardful.com/signup	31	$18.50 / mo / ?	13600	TRUE		
+quickads.ai	https://x.com/strategy_parody	https://www.quickads.ai/partnerprogram	32	$44 / mo 	13600			
+sendshort.ai	https://x.com/axelvdev	https://sendshort.ai/affiliate	33	$15 / mo / 100 shorts	10000	TRUE		
+sendshort.ai		https://sendshort.ai/affiliate	33	$23 / mo / 30 shorts 	10000	TRUE		
+vidio.ai			30	$15.9 / mo / 80 credits	9000			
+zubtitle.com	https://x.com/BairdHall	https://zubtitle.com/affiliate-program	54	$19 / mo	8300			
+zebracat.ai		https://www.zebracat.ai/affiliate	43	$20 / mo / 120 credits	5500		TRUE	
+Arcads.ai	https://x.com/rom1trs		30	$100 / 10 videos	4500		TRUE	TRUE
+AutoShorts.ai	https://x.com/ericsmith1302	https://autoshorts.ai/partners	36	$19 / mo / 3 videos / week	3400		TRUE	
+vadoo.tv		https://www.vadoo.tv/affiliate	64	$33 / mo / 50 videos	2800		TRUE	
+snapy.ai			25	$9 / mo / 100 credits	2200	TRUE		
+	https://x.com/BrivaelLp	argil.ai	31	$149/ mo / 100 mins	2100			TRUE
+humanpal.io		https://humanpal.io/jv/	37	-	1800			TRUE
+ossa.ai	https://x.com/Colewherld	https://ossa.ai/affiliate	20	$30 / mo / 30 videos	1700		TRUE	
+pipio.ai	https://x.com/michaelkbittner	https://www.pipio.ai/resources/affiliate	41	$16 / mo / 2 avatars	1700			TRUE
+supercreator.ai	https://x.com/techguyver		46	-	1300			
+shortmake.com			5	$21 / mo / 20 videos	940		TRUE	
+qlip.ai	https://x.com/SvenCP		24	?	904	TRUE		
+videogen.io		https://videogen.io/affiliate-program	37	$24 / mo	900		TRUE	
+latte.social	https://x.com/_m_i_c_h_a_e_l	https://www.latte.social/affiliates	33	$22 / mo	900	TRUE		
+revid.ai	https://x.com/tibo_maker	https://www.revid.ai/affiliates	29	$49 / mo / 200 videos	818		TRUE	
+trimmr.ai		https://trimmr.ai/app/affiliates	10	$19 / mo / 20hrs	780	TRUE		
+dumme.com			35	waitlist	767			
+minvo.pro			37	$12 / mo / 2hrs	500	TRUE		
+recast.studio	https://x.com/abhinavsohani	https://recast.studio/affiliates	40	$14 / mo / 150 mins	2000	TRUE		
+aivideocut.com			26	-	450	TRUE		
+choppity.com		https://choppity-ltd.getrewardful.com/signup	13	$16 / mo / 180 mins	430	TRUE		
+cutlabs.ai			9	$9 / mo / 6 videos / day	240	TRUE		
+clipwing.pro	https://x.com/thiswillblossom	https://clipwing.pro/affiliates	26	$30 / mo 	220	TRUE		
+facelessvideos.ai			10	$30 / mo / 30 videos	120		TRUE	
+snapcut.ai		https://www.snapcut.ai/affiliate	6	$9 / mo / 150 mins	100	TRUE		
+flowtapes.com			0	$9.99 / mo / 1k credits	50			
+makeshorts.ai			6	$29 / mo	25	TRUE		
+quickreelhq.io			0	-	0			
+smartrazor.ai			3	-	0			
+renderfit.com			1	$9.99 / mo / 900s	0	TRUE		
+dojoclip.com			9		0			
+autoreels.ai		https://autoreelsai.lemonsqueezy.com/affiliates	9	$19 / mo	0		TRUE	
+reelerai.com			12	$9.99 / 30 videos	0	TRUE		
+aivideo.to		https://ai-video.trackdesk.com/sign-up	2	$19 / mo / 10 videos	0			
+similarvideo.ai		https://similarvideo.ai/affiliate-program	0	-	0		TRUE	
+heyshort.video			22	-	0		TRUE	
+autopostsai.com			12	$17 / mo / 30 videos	0		TRUE	
+shortsfaceless.com		https://shortsfaceless.promotekit.com/	1	$29 / mo / 60 videos	0		TRUE	
+bityclips.com			1	$25 / mo / 30 videos	0		TRUE	
+jetsnaps.com		https://jetsnaps.com/partners	2	$29 / mo / 500 credits	0		TRUE	
+videofast.app			5	$19 / mo / 20 mins	0		TRUE	
+latercut.com			2	$9.5 / mo /  ?	0		TRUE	
+10levelup.com		https://10levelup.lemonsqueezy.com/affiliates	1	-	0	TRUE		
+slick.is		https://slick.promotekit.com/	7	$19 / mo	0	TRUE		
+reelze.app			0	$19 / mo / 25 videos	0		TRUE	
+rivetto.ai			0	-	0	TRUE		
+nullface.ai		https://nullface.ai/affiliate-home	4	$16 / mo / 40 videos	0		TRUE	
+magicshorts.co		https://magicshorts.co/affiliate	9	$37 / mo	0		TRUE	

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具导航 - 最全面的人工智能工具集合 | AI导航网站</title>
+    <meta name="description" content="AI工具导航是专业的人工智能工具导航网站，收录最全面的AI工具，包括大模型、AI图片处理、AI视频制作、AI文字处理、AI音乐、AI设计师工具等，帮助您快速找到最适合的AI助手和工具">
+    <meta name="keywords" content="AI工具导航,人工智能工具导航,AI工具网站,AI导航,人工智能工具,AI助手,大模型,AI图片处理,AI视频制作,AI文字处理,AI音乐工具,AI设计师工具,AI数字人">
+    <meta name="author" content="AI工具导航">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AI工具导航 - 最全面的人工智能工具集合">
+    <meta property="og:description" content="AI工具导航是专业的人工智能工具导航网站，收录最全面的AI工具，帮助您快速找到最适合的AI助手和工具">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.seodog.cn">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI工具导航 - 最全面的人工智能工具集合">
+    <meta name="twitter:description" content="AI工具导航是专业的人工智能工具导航网站，收录最全面的AI工具">
+    <link rel="canonical" href="https://www.seodog.cn">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI工具导航",
+        "description": "AI工具导航是专业的人工智能工具导航网站，收录最全面的AI工具，包括大模型、AI图片处理、AI视频制作、AI文字处理、AI音乐、AI设计师工具等",
+        "url": "https://www.seodog.cn",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.seodog.cn/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-indigo: #6366F1;
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            --primary-rose: #F43F5E;
+            --primary-orange: #F97316;
+            --primary-amber: #F59E0B;
+            --primary-yellow: #EAB308;
+            --primary-lime: #84CC16;
+            --primary-green: #22C55E;
+            --primary-emerald: #10B981;
+            --primary-teal: #14B8A6;
+            --primary-cyan: #06B6D4;
+            --primary-sky: #0EA5E9;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 120px;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .tool-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .tool-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        
+        .tool-card-content {
+            flex: 1;
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            color: white;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .category-header:hover::before {
+            left: 100%;
+        }
+        
+        .category-大模型 { background: linear-gradient(135deg, var(--primary-blue), var(--primary-sky)); }
+        .category-聚合模型 { background: linear-gradient(135deg, var(--primary-indigo), var(--primary-purple)); }
+        .category-文字处理 { background: linear-gradient(135deg, var(--primary-emerald), var(--primary-teal)); }
+        .category-图片处理 { background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); }
+        .category-视频处理 { background: linear-gradient(135deg, var(--primary-orange), var(--primary-rose)); }
+        .category-智能体 { background: linear-gradient(135deg, var(--primary-rose), var(--primary-pink)); }
+        .category-声音处理 { background: linear-gradient(135deg, var(--primary-teal), var(--primary-cyan)); }
+        .category-编程 { background: linear-gradient(135deg, var(--primary-gray-800), var(--primary-gray-700)); }
+        .category-网站 { background: linear-gradient(135deg, var(--primary-blue), var(--primary-indigo)); }
+        .category-AI助手 { background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); }
+        .category-社交媒体 { background: linear-gradient(135deg, var(--primary-orange), var(--primary-amber)); }
+        .category-其他常用 { background: linear-gradient(135deg, var(--primary-gray-600), var(--primary-gray-500)); }
+        .category-数据分析 { background: linear-gradient(135deg, var(--primary-cyan), var(--primary-sky)); }
+        .category-资讯 { background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink)); }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple), var(--primary-pink));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .search-box {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+        
+        .language-switch {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switch:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-2px);
+        }
+        
+        .language-btn {
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .language-btn.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .language-btn:not(.active) {
+            background: transparent;
+            color: var(--gray-600);
+        }
+        
+        .language-btn:not(.active):hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary-blue);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AI</span>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        <span class="lang-zh">AI工具导航</span>
+                        <span class="lang-en hidden">AI Tools Navigation</span>
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switch -->
+                    <div class="language-switch">
+                        <button class="language-btn active" data-lang="zh">中文</button>
+                        <button class="language-btn" data-lang="en">English</button>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <span class="text-gray-600 text-sm">
+                            <span class="lang-zh">收录 100+ AI工具</span>
+                            <span class="lang-en hidden">100+ AI Tools</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="hero-section py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+                <span class="lang-zh">发现最好的AI工具</span>
+                <span class="lang-en hidden">Discover the Best AI Tools</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                <span class="lang-zh">精选最优质的人工智能工具，提升您的工作效率和创造力</span>
+                <span class="lang-en hidden">Curated collection of the finest AI tools to enhance your productivity and creativity</span>
+            </p>
+            <div class="max-w-2xl mx-auto">
+                <input 
+                    type="text" 
+                    id="searchInput"
+                    placeholder="搜索AI工具..." 
+                    class="search-box w-full px-6 py-4 rounded-2xl text-lg outline-none"
+                    data-placeholder-zh="搜索AI工具..."
+                    data-placeholder-en="Search AI tools..."
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 大模型 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-大模型 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">🤖 大模型</span>
+                <span class="lang-en hidden">🤖 Large Language Models</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.doubao.com/chat/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-500 to-cyan-500">豆</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">豆包</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">字节跳动AI对话助手</span>
+                                <span class="lang-en hidden">ByteDance AI Chat Assistant</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-indigo-500 to-purple-500">DS</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Deepseek</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">深度学习对话模型</span>
+                                <span class="lang-en hidden">Deep Learning Chat Model</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-600 to-indigo-600">G</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">谷歌Gemini</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">Google最新AI助手</span>
+                                <span class="lang-en hidden">Google's Latest AI Assistant</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-purple-500 to-pink-500">P</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Perplexity</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">智能搜索引擎</span>
+                                <span class="lang-en hidden">Intelligent Search Engine</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://chat.chatbot.app/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-green-500 to-emerald-500">G4</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">GPT-4o</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">GPT-4o多模态AI助手</span>
+                                <span class="lang-en hidden">GPT-4o Multimodal AI Assistant</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-orange-500 to-red-500">C</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Claude</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">Anthropic AI助手</span>
+                                <span class="lang-en hidden">Anthropic AI Assistant</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 文字处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-文字处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">📝 文字处理</span>
+                <span class="lang-en hidden">📝 Text Processing</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://flomoapp.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-500 to-indigo-500">F</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Flomo</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">轻松记录想法和灵感</span>
+                                <span class="lang-en hidden">Easy idea and inspiration recording</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.biji.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-green-500 to-emerald-500">笔</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Get笔记</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">智能笔记应用</span>
+                                <span class="lang-en hidden">Smart note-taking app</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://monica.im/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-purple-500 to-pink-500">M</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Monica</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI写作助手</span>
+                                <span class="lang-en hidden">AI Writing Assistant</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 图片处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-图片处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">🎨 图片处理</span>
+                <span class="lang-en hidden">🎨 Image Processing</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-purple-500 to-pink-500">MJ</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Midjourney</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI艺术图像生成</span>
+                                <span class="lang-en hidden">AI Art Image Generation</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://openai.com/dall-e-2" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-500 to-cyan-500">D2</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">DALL-E 2</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">OpenAI图像生成</span>
+                                <span class="lang-en hidden">OpenAI Image Generation</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-600 to-indigo-600">C</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Canva</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">在线设计工具</span>
+                                <span class="lang-en hidden">Online Design Tool</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 视频处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-视频处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">🎬 视频处理</span>
+                <span class="lang-en hidden">🎬 Video Processing</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-orange-500 to-red-500">R</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Runway</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI视频编辑平台</span>
+                                <span class="lang-en hidden">AI Video Editing Platform</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.descript.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-green-500 to-emerald-500">D</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Descript</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI音视频编辑</span>
+                                <span class="lang-en hidden">AI Audio & Video Editing</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.synthesia.io/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-purple-500 to-pink-500">S</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Synthesia</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI视频生成</span>
+                                <span class="lang-en hidden">AI Video Generation</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 智能体 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-智能体 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">🤖 智能体</span>
+                <span class="lang-en hidden">🤖 AI Agents</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.agentflow.ai/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-500 to-cyan-500">AF</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">AgentFlow</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI智能体工作流</span>
+                                <span class="lang-en hidden">AI Agent Workflow</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.automate.io/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-green-500 to-emerald-500">A</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Automate.io</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">工作流程自动化</span>
+                                <span class="lang-en hidden">Workflow Automation</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://zapier.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-orange-500 to-red-500">Z</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Zapier</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">应用集成自动化</span>
+                                <span class="lang-en hidden">App Integration Automation</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 声音处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-声音处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">🎵 声音处理</span>
+                <span class="lang-en hidden">🎵 Audio Processing</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.mubert.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-purple-500 to-pink-500">M</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Mubert</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI音乐生成</span>
+                                <span class="lang-en hidden">AI Music Generation</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.descript.com/audio" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-500 to-cyan-500">D</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Descript Audio</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI音频编辑</span>
+                                <span class="lang-en hidden">AI Audio Editing</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.synthesia.io/audio" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-green-500 to-emerald-500">S</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Synthesia Audio</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI语音合成</span>
+                                <span class="lang-en hidden">AI Voice Synthesis</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 编程 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-编程 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">💻 编程</span>
+                <span class="lang-en hidden">💻 Programming</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://github.com/copilot" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-gray-700 to-gray-900">GH</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">GitHub Copilot</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI编程助手</span>
+                                <span class="lang-en hidden">AI Programming Assistant</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.replit.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-500 to-indigo-500">R</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Replit</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">在线编程平台</span>
+                                <span class="lang-en hidden">Online Programming Platform</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.cursor.sh/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-purple-500 to-pink-500">C</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Cursor</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">AI代码编辑器</span>
+                                <span class="lang-en hidden">AI Code Editor</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 数据分析 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-数据分析 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                <span class="lang-zh">📊 数据分析</span>
+                <span class="lang-en hidden">📊 Data Analysis</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.tableau.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-500 to-cyan-500">T</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Tableau</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">数据可视化平台</span>
+                                <span class="lang-en hidden">Data Visualization Platform</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-yellow-500 to-orange-500">P</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Power BI</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">微软商业智能</span>
+                                <span class="lang-en hidden">Microsoft Business Intelligence</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <div class="tool-card-header">
+                        <div class="tool-logo bg-gradient-to-r from-blue-600 to-indigo-600">Py</div>
+                        <div class="tool-card-content">
+                            <h3 class="font-semibold text-lg mb-2">Python</h3>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-zh">数据分析编程语言</span>
+                                <span class="lang-en hidden">Data Analysis Programming Language</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">AI</span>
+                </div>
+                <span class="text-xl font-semibold">
+                    <span class="lang-zh">AI工具导航</span>
+                    <span class="lang-en hidden">AI Tools Navigation</span>
+                </span>
+            </div>
+            <p class="text-gray-600 mb-4">
+                <span class="lang-zh">精选最优质的人工智能工具，提升您的工作效率和创造力</span>
+                <span class="lang-en hidden">Curated collection of the finest AI tools to enhance your productivity and creativity</span>
+            </p>
+            <p class="text-sm text-gray-500">
+                <span class="lang-zh">© 2024 AI工具导航. 联系我们 wx zhangyouxun2013</span>
+                <span class="lang-en hidden">© 2024 AI Tools Navigation. Contact us wx zhangyouxun2013</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 语言切换功能
+        const languageBtns = document.querySelectorAll('.language-btn');
+        const langElements = document.querySelectorAll('.lang-zh, .lang-en');
+        const searchInput = document.getElementById('searchInput');
+
+        function switchLanguage(lang) {
+            // 更新按钮状态
+            languageBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // 切换语言内容
+            langElements.forEach(element => {
+                if (element.classList.contains(`lang-${lang}`)) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            });
+
+            // 更新搜索框占位符
+            if (searchInput) {
+                const placeholder = searchInput.getAttribute(`data-placeholder-${lang}`);
+                if (placeholder) {
+                    searchInput.placeholder = placeholder;
+                }
+            }
+
+            // 更新HTML lang属性
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+
+            // 保存语言偏好到localStorage
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // 绑定语言切换事件
+        languageBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        // 页面加载时恢复语言偏好
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-language') || 'zh';
+            switchLanguage(savedLang);
+        });
+
+        // 搜索功能
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const toolCards = document.querySelectorAll('.tool-card');
+            
+            toolCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // 添加动画延迟
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.fade-in');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html> 

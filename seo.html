@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO工具导航 - 搜索引擎优化工具集合 | seodog.cn</title>
+    <meta name="description" content="专业的SEO工具导航，收录主流搜索引擎优化工具，包括关键词分析、网站诊断、排名监控等工具，助力网站SEO优化">
+    <meta name="keywords" content="SEO工具,搜索引擎优化,关键词分析,网站诊断,排名监控,SEO导航">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-purple: #8B5CF6;
+            --primary-green: #10B981;
+            --primary-orange: #F97316;
+            --primary-pink: #EC4899;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1F2937;
+            line-height: 1.6;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .link-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .link-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+            color: white;
+            border-radius: 1rem 1rem 0 0;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-blue), var(--primary-purple));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">🔍</span>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+                        SEO工具导航
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://www.seodog.cn" class="text-blue-600 hover:underline text-sm font-semibold">首页</a>
+                    <a href="img.html" class="text-blue-600 hover:underline text-sm font-semibold">图片导航</a>
+
+                    <a href="chuhai.html" class="text-blue-600 hover:underline text-sm font-semibold">出海</a>
+                    <a href="social.html" class="text-blue-600 hover:underline text-sm font-semibold">社交</a>
+                    <a href="xiaohongshu.html" class="text-blue-600 hover:underline text-sm font-semibold">小红书</a>
+                    <a href="links.html" class="text-blue-600 hover:underline text-sm font-semibold">友情链接</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 mb-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="gradient-text text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                SEO工具导航
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-light">
+                专业搜索引擎优化工具集合，助力网站排名提升
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-16">
+        <!-- 关键词分析工具 -->
+        <section class="mb-16 fade-in">
+            <div class="glass-effect rounded-2xl overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 mb-0">
+                    🔍 关键词分析工具
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                    <a href="https://ahrefs.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Ahrefs</h3>
+                        <p class="text-gray-600 text-sm">ahrefs.com</p>
+                        <p class="text-gray-500 text-xs mt-2">专业SEO分析工具</p>
+                    </a>
+                    <a href="https://semrush.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SEMrush</h3>
+                        <p class="text-gray-600 text-sm">semrush.com</p>
+                        <p class="text-gray-500 text-xs mt-2">全面的SEO和营销工具</p>
+                    </a>
+                    <a href="https://moz.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Moz</h3>
+                        <p class="text-gray-600 text-sm">moz.com</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO软件和工具</p>
+                    </a>
+                    <a href="https://ubersuggest.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Ubersuggest</h3>
+                        <p class="text-gray-600 text-sm">ubersuggest.com</p>
+                        <p class="text-gray-500 text-xs mt-2">免费关键词研究工具</p>
+                    </a>
+                    <a href="https://keywordtool.io" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">KeywordTool</h3>
+                        <p class="text-gray-600 text-sm">keywordtool.io</p>
+                        <p class="text-gray-500 text-xs mt-2">关键词生成工具</p>
+                    </a>
+                    <a href="https://answerthepublic.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Answer The Public</h3>
+                        <p class="text-gray-600 text-sm">answerthepublic.com</p>
+                        <p class="text-gray-500 text-xs mt-2">用户问题研究工具</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 网站诊断工具 -->
+        <section class="mb-16 fade-in">
+            <div class="glass-effect rounded-2xl overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 mb-0">
+                    🏥 网站诊断工具
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                    <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">PageSpeed Insights</h3>
+                        <p class="text-gray-600 text-sm">pagespeed.web.dev</p>
+                        <p class="text-gray-500 text-xs mt-2">Google页面速度测试</p>
+                    </a>
+                    <a href="https://gtmetrix.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">GTmetrix</h3>
+                        <p class="text-gray-600 text-sm">gtmetrix.com</p>
+                        <p class="text-gray-500 text-xs mt-2">网站性能分析工具</p>
+                    </a>
+                    <a href="https://screamingfrog.co.uk" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Screaming Frog</h3>
+                        <p class="text-gray-600 text-sm">screamingfrog.co.uk</p>
+                        <p class="text-gray-500 text-xs mt-2">网站爬虫工具</p>
+                    </a>
+                    <a href="https://seositecheckup.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SEO Site Checkup</h3>
+                        <p class="text-gray-600 text-sm">seositecheckup.com</p>
+                        <p class="text-gray-500 text-xs mt-2">免费SEO检查工具</p>
+                    </a>
+                    <a href="https://seoreviewtools.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SEO Review Tools</h3>
+                        <p class="text-gray-600 text-sm">seoreviewtools.com</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO审查工具</p>
+                    </a>
+                    <a href="https://varvy.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Varvy</h3>
+                        <p class="text-gray-600 text-sm">varvy.com</p>
+                        <p class="text-gray-500 text-xs mt-2">技术SEO检查工具</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 排名监控工具 -->
+        <section class="mb-16 fade-in">
+            <div class="glass-effect rounded-2xl overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 mb-0">
+                    📊 排名监控工具
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                    <a href="https://serpstat.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Serpstat</h3>
+                        <p class="text-gray-600 text-sm">serpstat.com</p>
+                        <p class="text-gray-500 text-xs mt-2">关键词排名跟踪</p>
+                    </a>
+                    <a href="https://serpbook.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SerpBook</h3>
+                        <p class="text-gray-600 text-sm">serpbook.com</p>
+                        <p class="text-gray-500 text-xs mt-2">免费排名跟踪工具</p>
+                    </a>
+                    <a href="https://serpwatcher.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SerpWatcher</h3>
+                        <p class="text-gray-600 text-sm">serpwatcher.com</p>
+                        <p class="text-gray-500 text-xs mt-2">排名监控服务</p>
+                    </a>
+                    <a href="https://serprobot.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SerpRobot</h3>
+                        <p class="text-gray-600 text-sm">serprobot.com</p>
+                        <p class="text-gray-500 text-xs mt-2">自动化排名监控</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 内容优化工具 -->
+        <section class="mb-16 fade-in">
+            <div class="glass-effect rounded-2xl overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 mb-0">
+                    ✍️ 内容优化工具
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                    <a href="https://yoast.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Yoast SEO</h3>
+                        <p class="text-gray-600 text-sm">yoast.com</p>
+                        <p class="text-gray-500 text-xs mt-2">WordPress SEO插件</p>
+                    </a>
+                    <a href="https://grammarly.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Grammarly</h3>
+                        <p class="text-gray-600 text-sm">grammarly.com</p>
+                        <p class="text-gray-500 text-xs mt-2">语法检查工具</p>
+                    </a>
+                    <a href="https://hemingwayapp.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Hemingway Editor</h3>
+                        <p class="text-gray-600 text-sm">hemingwayapp.com</p>
+                        <p class="text-gray-500 text-xs mt-2">写作风格优化</p>
+                    </a>
+                    <a href="https://copyscape.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Copyscape</h3>
+                        <p class="text-gray-600 text-sm">copyscape.com</p>
+                        <p class="text-gray-500 text-xs mt-2">内容抄袭检测</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO学习资源 -->
+        <section class="mb-16 fade-in">
+            <div class="glass-effect rounded-2xl overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 mb-0">
+                    📚 SEO学习资源
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                    <a href="https://developers.google.com/search/docs" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Google SEO指南</h3>
+                        <p class="text-gray-600 text-sm">developers.google.com</p>
+                        <p class="text-gray-500 text-xs mt-2">Google官方SEO文档</p>
+                    </a>
+                    <a href="https://moz.com/beginners-guide-to-seo" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Moz SEO入门指南</h3>
+                        <p class="text-gray-600 text-sm">moz.com</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO初学者必读</p>
+                    </a>
+                    <a href="https://backlinko.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Backlinko</h3>
+                        <p class="text-gray-600 text-sm">backlinko.com</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO策略研究网站</p>
+                    </a>
+                    <a href="https://searchengineland.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Search Engine Land</h3>
+                        <p class="text-gray-600 text-sm">searchengineland.com</p>
+                        <p class="text-gray-500 text-xs mt-2">搜索引擎新闻资讯</p>
+                    </a>
+                    <a href="https://searchenginereports.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Search Engine Reports</h3>
+                        <p class="text-gray-600 text-sm">searchenginereports.com</p>
+                        <p class="text-gray-500 text-xs mt-2">搜索引擎报告</p>
+                    </a>
+                    <a href="https://searchengineland.com/guide/what-is-seo" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">什么是SEO</h3>
+                        <p class="text-gray-600 text-sm">searchengineland.com</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO基础知识</p>
+                    </a>
+                    <a href="https://www.searchenginejournal.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Search Engine Journal</h3>
+                        <p class="text-gray-600 text-sm">searchenginejournal.com</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO行业资讯</p>
+                    </a>
+                    <a href="https://www.semrush.com/blog" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SEMrush博客</h3>
+                        <p class="text-gray-600 text-sm">semrush.com/blog</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO和营销博客</p>
+                    </a>
+                    <a href="https://ahrefs.com/blog" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Ahrefs博客</h3>
+                        <p class="text-gray-600 text-sm">ahrefs.com/blog</p>
+                        <p class="text-gray-500 text-xs mt-2">SEO工具使用教程</p>
+                    </a>
+                    <a href="https://www.wordstream.com/blog" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">WordStream博客</h3>
+                        <p class="text-gray-600 text-sm">wordstream.com/blog</p>
+                        <p class="text-gray-500 text-xs mt-2">数字营销博客</p>
+                    </a>
+                    <a href="https://www.neilpatel.com/blog" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Neil Patel博客</h3>
+                        <p class="text-gray-600 text-sm">neilpatel.com/blog</p>
+                        <p class="text-gray-500 text-xs mt-2">数字营销专家博客</p>
+                    </a>
+                    <a href="https://www.brianclifton.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Brian Clifton</h3>
+                        <p class="text-gray-600 text-sm">brianclifton.com</p>
+                        <p class="text-gray-500 text-xs mt-2">Google Analytics专家</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 更多SEO工具 -->
+        <section class="mb-16 fade-in">
+            <div class="glass-effect rounded-2xl overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 mb-0">
+                    🛠️ 更多SEO工具
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                    <a href="https://www.google.com/webmasters/tools" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Google Search Console</h3>
+                        <p class="text-gray-600 text-sm">google.com/webmasters</p>
+                        <p class="text-gray-500 text-xs mt-2">Google网站管理员工具</p>
+                    </a>
+                    <a href="https://analytics.google.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Google Analytics</h3>
+                        <p class="text-gray-600 text-sm">analytics.google.com</p>
+                        <p class="text-gray-500 text-xs mt-2">网站流量分析工具</p>
+                    </a>
+                    <a href="https://www.bing.com/webmasters" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Bing Webmaster Tools</h3>
+                        <p class="text-gray-600 text-sm">bing.com/webmasters</p>
+                        <p class="text-gray-500 text-xs mt-2">必应网站管理员工具</p>
+                    </a>
+                    <a href="https://www.baidu.com/webmaster" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">百度站长工具</h3>
+                        <p class="text-gray-600 text-sm">baidu.com/webmaster</p>
+                        <p class="text-gray-500 text-xs mt-2">百度网站管理员工具</p>
+                    </a>
+                    <a href="https://ziyuan.baidu.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">百度资源平台</h3>
+                        <p class="text-gray-600 text-sm">ziyuan.baidu.com</p>
+                        <p class="text-gray-500 text-xs mt-2">百度SEO资源平台</p>
+                    </a>
+                    <a href="https://www.sogou.com/webmaster" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">搜狗站长工具</h3>
+                        <p class="text-gray-600 text-sm">sogou.com/webmaster</p>
+                        <p class="text-gray-500 text-xs mt-2">搜狗网站管理员工具</p>
+                    </a>
+                    <a href="https://www.360.cn/webmaster" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">360站长工具</h3>
+                        <p class="text-gray-600 text-sm">360.cn/webmaster</p>
+                        <p class="text-gray-500 text-xs mt-2">360网站管理员工具</p>
+                    </a>
+                    <a href="https://www.yandex.com/webmaster" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Yandex Webmaster</h3>
+                        <p class="text-gray-600 text-sm">yandex.com/webmaster</p>
+                        <p class="text-gray-500 text-xs mt-2">Yandex网站管理员工具</p>
+                    </a>
+                    <a href="https://www.similarweb.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">SimilarWeb</h3>
+                        <p class="text-gray-600 text-sm">similarweb.com</p>
+                        <p class="text-gray-500 text-xs mt-2">网站流量分析工具</p>
+                    </a>
+                    <a href="https://www.alexa.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Alexa</h3>
+                        <p class="text-gray-600 text-sm">alexa.com</p>
+                        <p class="text-gray-500 text-xs mt-2">网站排名分析工具</p>
+                    </a>
+                    <a href="https://www.quantcast.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Quantcast</h3>
+                        <p class="text-gray-600 text-sm">quantcast.com</p>
+                        <p class="text-gray-500 text-xs mt-2">网站受众分析工具</p>
+                    </a>
+                    <a href="https://www.comscore.com" target="_blank" rel="noopener noreferrer" class="link-card p-6 rounded-xl hover:shadow-lg transition-all">
+                        <h3 class="font-semibold text-lg mb-2">Comscore</h3>
+                        <p class="text-gray-600 text-sm">comscore.com</p>
+                        <p class="text-gray-500 text-xs mt-2">数字媒体测量工具</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系信息 -->
+        <section class="fade-in">
+            <div class="glass-effect rounded-2xl overflow-hidden">
+                <h2 class="category-header text-2xl font-bold p-6 mb-0">
+                    📞 联系信息
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                    <div class="link-card p-6 rounded-xl">
+                        <h3 class="font-semibold text-lg mb-2">微信联系</h3>
+                        <p class="text-gray-600 text-sm">zhangyouxun2013</p>
+                        <p class="text-gray-500 text-xs mt-2">添加微信获取SEO咨询</p>
+                    </div>
+                    <div class="link-card p-6 rounded-xl">
+                        <h3 class="font-semibold text-lg mb-2">网站信息</h3>
+                        <p class="text-gray-600 text-sm">© 2024 SEO工具导航</p>
+                        <p class="text-gray-500 text-xs mt-2">专业SEO工具集合，助力网站优化</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">🔍</span>
+                </div>
+                <span class="text-xl font-semibold">SEO工具导航</span>
+            </div>
+            <p class="text-gray-600 mb-4">专业搜索引擎优化工具集合</p>
+            <p class="text-sm text-gray-500">© 2024 SEO工具导航. 联系我们 wx zhangyouxun2013</p>
+        </div>
+    </footer>
+</body>
+</html> 

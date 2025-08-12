@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具导航 - 最全面的人工智能工具集合</title>
+    <meta name="description" content="AI工具导航 - 收录最全面的人工智能工具，包括大模型、图片处理、视频制作、文字处理等AI工具，快速找到适合您的AI助手">
+    <meta name="keywords" content="AI工具导航,人工智能工具,AI助手,大模型,图片处理,视频制作">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-gray: #8E8E93;
+            --apple-light-gray: #F2F2F7;
+            --apple-dark: #1D1D1F;
+            --apple-white: #FFFFFF;
+            --apple-green: #34C759;
+            --apple-purple: #AF52DE;
+            --apple-orange: #FF9500;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #F2F2F7 0%, #E5E5EA 100%);
+            color: var(--apple-dark);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .tool-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--apple-blue), #5AC8FA);
+            color: white;
+        }
+        
+        .category-大模型 { background: linear-gradient(135deg, #007AFF, #5AC8FA); }
+        .category-文字处理 { background: linear-gradient(135deg, #34C759, #30D158); }
+        .category-图片处理 { background: linear-gradient(135deg, #AF52DE, #BF5AF2); }
+        .category-视频处理 { background: linear-gradient(135deg, #FF9500, #FF9F0A); }
+        .category-智能体 { background: linear-gradient(135deg, #FF3B30, #FF453A); }
+        .category-声音处理 { background: linear-gradient(135deg, #32D74B, #30D158); }
+        .category-编程 { background: linear-gradient(135deg, #1D1D1F, #48484A); }
+        .category-网站 { background: linear-gradient(135deg, #007AFF, #409CFF); }
+        .category-AI助手 { background: linear-gradient(135deg, #AF52DE, #DA70D6); }
+        .category-社交媒体 { background: linear-gradient(135deg, #FF9500, #FFB340); }
+        .category-其他常用 { background: linear-gradient(135deg, #8E8E93, #AEAEB2); }
+        .category-数据分析 { background: linear-gradient(135deg, #64D2FF, #409CFF); }
+        
+        .search-box {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 122, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus {
+            border-color: var(--apple-blue);
+            box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .tool-card {
+                margin-bottom: 12px;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8794607118520437"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9C4GSK3Q4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9C4GSK3Q4C');
+</script>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AI</span>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        AI工具导航
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <span class="text-gray-600 text-sm">收录 100+ AI工具</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="py-12 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                发现最好的AI工具
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                精选最优质的人工智能工具，提升您的工作效率和创造力
+            </p>
+            <div class="max-w-2xl mx-auto">
+                <input 
+                    type="text" 
+                    id="searchInput"
+                    placeholder="搜索AI工具..." 
+                    class="search-box w-full px-6 py-4 rounded-2xl text-lg outline-none"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 大模型 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-大模型 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                🤖 大模型
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.doubao.com/chat/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">豆包</h3>
+                    <p class="text-gray-600 text-sm">字节跳动AI对话助手</p>
+                </a>
+                <a href="https://chat.deepseek.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Deepseek</h3>
+                    <p class="text-gray-600 text-sm">深度学习对话模型</p>
+                </a>
+                <a href="https://gemini.google.com/app" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">谷歌Gemini</h3>
+                    <p class="text-gray-600 text-sm">Google最新AI助手</p>
+                </a>
+                
+                <a href="https://www.perplexity.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">perplexity</h3>
+                    <p class="text-gray-600 text-sm">智能搜索引擎</p>
+                </a>
+                <a href="https://chat.chatbot.app/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Ghat gpt4o</h3>
+                    <p class="text-gray-600 text-sm">GPT-4o多模态AI助手</p>
+                </a>
+                <a href="https://claude.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Claude</h3>
+                    <p class="text-gray-600 text-sm">Anthropic AI助手</p>
+                </a>
+                <a href="https://x.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Grok</h3>
+                    <p class="text-gray-600 text-sm">X.AI对话助手</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 文字处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-文字处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                📝 文字处理
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://flomoapp.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Flomo</h3>
+                    <p class="text-gray-600 text-sm">轻松记录想法和灵感</p>
+                </a>
+                <a href="https://www.biji.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Get笔记</h3>
+                    <p class="text-gray-600 text-sm">智能笔记应用</p>
+                </a>
+                <a href="https://monica.im/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Monica</h3>
+                    <p class="text-gray-600 text-sm">AI写作助手</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 图片处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-图片处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                🎨 图片处理
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://pixabay.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Pixabay</h3>
+                    <p class="text-gray-600 text-sm">免费图片素材库</p>
+                </a>
+                <a href="https://dreamina.capcut.com/ai-tool/home/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">即梦国际版</h3>
+                    <p class="text-gray-600 text-sm">AI图像生成工具</p>
+                </a>
+                <a href="https://lexica.art/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Lexica</h3>
+                    <p class="text-gray-600 text-sm">AI图片提示词库</p>
+                </a>
+                <a href="https://www.remove.bg/zh" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Remove.bg</h3>
+                    <p class="text-gray-600 text-sm">AI背景移除工具</p>
+                </a>
+                <a href="https://unsplash.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Unsplash</h3>
+                    <p class="text-gray-600 text-sm">高质量图片素材</p>
+                </a>
+                <a href="https://raphael.app/zh" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Raphael</h3>
+                    <p class="text-gray-600 text-sm">AI图像生成平台</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 视频处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-视频处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                🎬 视频处理
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://app.heygen.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">HeyGen</h3>
+                    <p class="text-gray-600 text-sm">AI视频生成平台</p>
+                </a>
+                <a href="https://www.capcut.cn/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">剪映国际版</h3>
+                    <p class="text-gray-600 text-sm">专业视频编辑工具</p>
+                </a>
+                <a href="https://hailuoai.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">海螺AI</h3>
+                    <p class="text-gray-600 text-sm">AI视频创作平台</p>
+                </a>
+                <a href="https://pika.art/about" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Pika</h3>
+                    <p class="text-gray-600 text-sm">AI视频生成工具</p>
+                </a>
+                <a href="https://jimeng.jianying.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">即梦</h3>
+                    <p class="text-gray-600 text-sm">AI视频创作工具</p>
+                </a>
+                <a href="https://app.klingai.com/cn/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">可灵</h3>
+                    <p class="text-gray-600 text-sm">AI视频生成平台</p>
+                </a>
+                <a href="https://runwayml.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Runway</h3>
+                    <p class="text-gray-600 text-sm">创意AI工具套件</p>
+                </a>
+                <a href="https://openai.com/sora/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Sora</h3>
+                    <p class="text-gray-600 text-sm">OpenAI视频生成模型</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 声音处理 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-声音处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                🎵 声音处理
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://fish.audio/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Fish Audio</h3>
+                    <p class="text-gray-600 text-sm">AI配音工具</p>
+                </a>
+                <a href="https://ttsmaker.cn/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">TTSMaker</h3>
+                    <p class="text-gray-600 text-sm">文字转语音工具</p>
+                </a>
+                <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">MiniMax T2A</h3>
+                    <p class="text-gray-600 text-sm">文本转音频API</p>
+                </a>
+                <a href="https://anyvoice.net/zh" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">声音克隆</h3>
+                    <p class="text-gray-600 text-sm">AI声音克隆工具</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 编程 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-编程 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                💻 编程
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.cursor.com/cn" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Cursor</h3>
+                    <p class="text-gray-600 text-sm">AI代码编辑器</p>
+                </a>
+                <a href="https://windsurf.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Windsurf</h3>
+                    <p class="text-gray-600 text-sm">AI编程助手</p>
+                </a>
+                <a href="https://code.visualstudio.com/Download" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">VS Code</h3>
+                    <p class="text-gray-600 text-sm">专业代码编辑器</p>
+                </a>
+                <a href="https://bolt.new/"  target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Bolt</h3>
+                    <p class="text-gray-600 text-sm">快速Web开发工具</p>
+                </a>
+                <a href="https://tailwindcss.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Tailwind CSS</h3>
+                    <p class="text-gray-600 text-sm">实用优先的CSS框架</p>
+                </a>
+                <a href="https://agent.minimax.io/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">MiniMax Agent</h3>
+                    <p class="text-gray-600 text-sm">AI编程助手</p>
+                </a>
+                <a href="https://carrd.co/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Carrd</h3>
+                    <p class="text-gray-600 text-sm">单页网站构建器</p>
+                </a>
+                <a href="https://space.coze.cn/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">扣子</h3>
+                    <p class="text-gray-600 text-sm">智能体创建平台</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 网站服务 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-网站 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                🌐 网站服务
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.cloudflare.com/zh-cn/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Cloudflare</h3>
+                    <p class="text-gray-600 text-sm">网站加速和安全服务</p>
+                </a>
+                <a href="https://vercel.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Vercel</h3>
+                    <p class="text-gray-600 text-sm">前端部署平台</p>
+                </a>
+                <a href="https://www.domain.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Domain.com</h3>
+                    <p class="text-gray-600 text-sm">域名注册服务</p>
+                </a>
+                <a href="https://theresanaiforthat.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">There's An AI For That</h3>
+                    <p class="text-gray-600 text-sm">AI工具发现平台</p>
+                </a>
+                <a href="https://www.toolify.ai/Best-AI-Tools-revenue" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Toolify.ai</h3>
+                    <p class="text-gray-600 text-sm">AI工具排行榜</p>
+                </a>
+                <a href="https://readmake.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">ReadMake</h3>
+                    <p class="text-gray-600 text-sm">内容创作工具</p>
+                </a>
+                <a href="https://themeforest.net/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">ThemeForest</h3>
+                    <p class="text-gray-600 text-sm">网站模板市场</p>
+                </a>
+                <a href="https://cloud.tencent.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">腾讯云</h3>
+                    <p class="text-gray-600 text-sm">云计算服务平台</p>
+                </a>
+                <a href="https://www.spaceship.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">spaceship</h3>
+                    <p class="text-gray-600 text-sm">现代化云服务器与托管平台</p>
+                </a>
+                <a href="https://www.aliyun.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">阿里云</h3>
+                    <p class="text-gray-600 text-sm">阿里云云计算服务</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 社交媒体 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-社交媒体 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                📱 社交媒体
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://www.xiaohongshu.com/explore" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">小红书</h3>
+                    <p class="text-gray-600 text-sm">生活方式分享平台</p>
+                </a>
+                <a href="https://felo.ai/search" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">热点查询</h3>
+                    <p class="text-gray-600 text-sm">实时热点搜索工具</p>
+                </a>
+                <a href="https://mp.weixin.qq.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">微信公众号</h3>
+                    <p class="text-gray-600 text-sm">公众号管理平台</p>
+                </a>
+                <a href="https://weibo.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">微博</h3>
+                    <p class="text-gray-600 text-sm">社交媒体平台</p>
+                </a>
+                <a href="https://www.douban.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">豆瓣</h3>
+                    <p class="text-gray-600 text-sm">文化生活社区</p>
+                </a>
+                <a href="https://www.bilibili.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">哔哩哔哩</h3>
+                    <p class="text-gray-600 text-sm">年轻人的文化社区</p>
+                </a>
+                <a href="https://www.zhihu.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">知乎</h3>
+                    <p class="text-gray-600 text-sm">知识分享问答平台</p>
+                </a>
+                <a href="https://www.toutiao.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">今日头条</h3>
+                    <p class="text-gray-600 text-sm">新闻资讯平台</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 其他常用 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-其他常用 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                🔧 其他常用
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://md2card.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">小红书卡片</h3>
+                    <p class="text-gray-600 text-sm">Markdown转小红书卡片</p>
+                </a>
+                <a href="https://dlpanda.com/zh-CN/xiaohongshu" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">视频下载</h3>
+                    <p class="text-gray-600 text-sm">小红书视频下载工具</p>
+                </a>
+                <a href="https://gamma.app" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Gamma PPT生成</h3>
+                    <p class="text-gray-600 text-sm">AI PPT演示文稿生成</p>
+                </a>
+                <a href="https://scys.com/articleDetail/xq_topic/8852585812152582" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">网站出海</h3>
+                    <p class="text-gray-600 text-sm">海外市场拓展指南</p>
+                </a>
+                <a href="https://notebooklm.google" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">NotebookLM</h3>
+                    <p class="text-gray-600 text-sm">Google AI笔记工具</p>
+                </a>
+                <a href="https://jeannen.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">个人开发者</h3>
+                    <p class="text-gray-600 text-sm">开发者资源平台</p>
+                </a>
+                <a href="https://www.producthunt.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Product Hunt</h3>
+                    <p class="text-gray-600 text-sm">新产品发布平台</p>
+                </a>
+                <a href="https://news.ycombinator.com/show" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">YC Hacker News</h3>
+                    <p class="text-gray-600 text-sm">技术社区讨论</p>
+                </a>
+                <a href="https://seo.box/referring/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Top 100产品</h3>
+                    <p class="text-gray-600 text-sm">最赚钱产品排行</p>
+                </a>
+                <a href="https://www.toolify.ai/zh/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Toolify导航</h3>
+                    <p class="text-gray-600 text-sm">AI产品导航网站</p>
+                </a>
+                <a href="https://www.gptshunter.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">GPT商店</h3>
+                    <p class="text-gray-600 text-sm">GPT应用发现平台</p>
+                </a>
+                <a href="https://temp-mail.org/zh/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">临时邮箱</h3>
+                    <p class="text-gray-600 text-sm">一次性邮箱服务</p>
+                </a>
+                <a href="https://www.trae.com.cn/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Trae</h3>
+                    <p class="text-gray-600 text-sm">在线工具平台</p>
+                </a>
+                <a href="https://docs.cherry-ai.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Cherry AI</h3>
+                    <p class="text-gray-600 text-sm">国内多模型平台</p>
+                </a>
+                <a href="https://xinquji.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">新趣集</h3>
+                    <p class="text-gray-600 text-sm">创意工具集合</p>
+                </a>
+                <a href="https://stackoverflow.co/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Stack Overflow</h3>
+                    <p class="text-gray-600 text-sm">程序员问答社区</p>
+                </a>
+                <a href="https://www.aliyun.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">阿里通义</h3>
+                    <p class="text-gray-600 text-sm">阿里云AI助手</p>
+                </a>
+                <a href="https://matrix.tencent.com/ai-detect/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">朱雀大模型检测</h3>
+                    <p class="text-gray-600 text-sm">腾讯AI内容检测工具</p>
+                </a>
+                <a href="https://pollo.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Pollo AI</h3>
+                    <p class="text-gray-600 text-sm">智能AI助手</p>
+                </a>
+                <a href="https://hix.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">HIX AI</h3>
+                    <p class="text-gray-600 text-sm">全能AI写作工具</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 数据分析 -->
+        <section class="mb-12 fade-in">
+            <h2 class="category-header category-数据分析 text-2xl font-bold p-4 rounded-t-2xl mb-0">
+                📊 数据分析
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-white rounded-b-2xl shadow-lg">
+                <a href="https://analytics.google.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Google Analytics</h3>
+                    <p class="text-gray-600 text-sm">网站流量分析工具</p>
+                </a>
+                <a href="https://trends.google.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
+                    <h3 class="font-semibold text-lg mb-2">Google Trends</h3>
+                    <p class="text-gray-600 text-sm">全球趋势与热度分析</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">AI</span>
+                </div>
+                <span class="text-xl font-semibold">AI工具导航</span>
+            </div>
+            <p class="text-gray-600 mb-4">发现最好的AI工具，提升您的工作效率</p>
+            <p class="text-sm text-gray-500">© 2024 AI工具导航. 精选优质AI工具，联系我们 wx zhangyouxun2013</p>
+        </div>
+    </footer>
+
+    <script>
+        // 搜索功能
+        const searchInput = document.getElementById('searchInput');
+        const toolCards = document.querySelectorAll('.tool-card');
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            toolCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.parentElement.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // 隐藏空的分类
+            document.querySelectorAll('section').forEach(section => {
+                const visibleCards = section.querySelectorAll('.tool-card[style*="block"], .tool-card:not([style*="none"])');
+                if (visibleCards.length === 0 && searchTerm !== '') {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                }
+            });
+        });
+
+        // 平滑滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

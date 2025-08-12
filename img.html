@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="最全AI图片处理工具导航：图片生成、抠图、增强修复、风格转换、压缩优化，502+优质工具一站直达，提升你的创作效率。">
+  <meta name="keywords" content="AI图片处理, AI图片生成, AI抠图, 图片修复, AI工具导航, 图片压缩, 在线抠图, Midjourney, DALL-E">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="AI图片处理导航">
+  <meta property="og:title" content="AI图片处理导航 - 最全工具集合">
+  <meta property="og:description" content="502+优质AI图片处理工具，涵盖生成、编辑、修复、压缩等全方位需求">
+  <meta property="og:type" content="website">
+  <title>AI图片处理导航 - 最全工具集合｜502+优质工具一站直达</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .card-hover { 
+      transition: all 0.3s ease; 
+    }
+    .card-hover:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+    }
+    .search-focus:focus { 
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); 
+    }
+    .category-badge { 
+      background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); 
+    }
+    .tool-rating { 
+      color: #fbbf24; 
+    }
+    
+    /* 移动端优化 */
+    @media (max-width: 768px) {
+      .mobile-search {
+        width: 100% !important;
+        max-width: none !important;
+      }
+      
+      .mobile-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+      }
+      
+      .mobile-cards {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+      }
+      
+      .mobile-padding {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      
+      .mobile-text-sm {
+        font-size: 0.875rem !important;
+      }
+      
+      .mobile-hidden {
+        display: none !important;
+      }
+      
+      .tool-item-mobile {
+        padding: 0.75rem !important;
+        min-height: 44px; /* 苹果推荐的最小触摸目标 */
+      }
+      
+      .nav-mobile {
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+      }
+      
+      .footer-mobile {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+      }
+    }
+    
+    /* 小屏幕优化 */
+    @media (max-width: 480px) {
+      .text-responsive-xl {
+        font-size: 1.25rem !important;
+      }
+      
+      .text-responsive-lg {
+        font-size: 1.125rem !important;
+      }
+      
+      .card-responsive-padding {
+        padding: 1rem !important;
+      }
+      
+      .mobile-flex-col {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      
+      .mobile-w-full {
+        width: 100% !important;
+      }
+      
+      .mobile-mt-2 {
+        margin-top: 0.5rem !important;
+      }
+    }
+    
+    /* 触摸设备优化 */
+    @media (hover: none) and (pointer: coarse) {
+      .card-hover:hover {
+        transform: none;
+      }
+      
+      .card-hover:active {
+        transform: scale(0.98);
+      }
+      
+      /* 增大触摸目标 */
+      a, button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    
+    /* 横屏手机优化 */
+    @media (max-width: 896px) and (orientation: landscape) {
+      .landscape-compact {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+      }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PF2NFXDZ9Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PF2NFXDZ9Z');
+</script>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  <header class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+    <div class="max-w-7xl mx-auto mobile-padding px-4">
+      <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 space-y-4 lg:space-y-0">
+        <div class="flex items-center justify-between">
+          <div class="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-responsive-xl">
+            <i class="fas fa-magic mr-2"></i>AI图片处理导航
+          </div>
+          <div class="flex items-center space-x-2 lg:hidden">
+            <span class="text-xs bg-red-500 text-white px-2 py-1 rounded-full">502+工具</span>
+            <button 
+              onclick="toggleTheme()" 
+              class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              title="切换主题"
+            >
+              <i class="fas fa-moon dark:hidden"></i>
+              <i class="fas fa-sun hidden dark:inline"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row lg:items-center space-y-3 lg:space-y-0 lg:space-x-4">
+          <div class="relative mobile-w-full">
+            <input 
+              type="text" 
+              id="searchInput"
+              placeholder="搜索工具名称或功能..." 
+              class="w-full lg:w-64 mobile-search px-4 py-2 pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none search-focus focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600"
+            >
+            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+          </div>
+          
+          <div class="hidden lg:flex items-center space-x-4">
+            <span class="text-xs bg-red-500 text-white px-2 py-1 rounded-full">502+工具</span>
+            <button 
+              onclick="toggleTheme()" 
+              class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              title="切换主题"
+            >
+              <i class="fas fa-moon dark:hidden"></i>
+              <i class="fas fa-sun hidden dark:inline"></i>
+            </button>
+            
+            <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
+              <i class="fas fa-fire text-orange-500"></i>
+              <span>今日访问: <span id="todayVisits">1,234</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 快速分类导航 -->
+      <div class="flex space-x-3 lg:space-x-6 pb-4 overflow-x-auto nav-mobile">
+        <a href="#ai-generate" class="whitespace-nowrap text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors tool-item-mobile py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fas fa-robot mr-1"></i>AI生成
+        </a>
+        <a href="#ai-edit" class="whitespace-nowrap text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors tool-item-mobile py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fas fa-edit mr-1"></i>AI编辑
+        </a>
+        <a href="#background-remove" class="whitespace-nowrap text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors tool-item-mobile py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fas fa-cut mr-1"></i>抠图换背景
+        </a>
+        <a href="#enhance-repair" class="whitespace-nowrap text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors tool-item-mobile py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fas fa-tools mr-1"></i>修复增强
+        </a>
+        <a href="#compress" class="whitespace-nowrap text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors tool-item-mobile py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fas fa-compress mr-1"></i>压缩优化
+        </a>
+        <a href="#free-images" class="whitespace-nowrap text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors tool-item-mobile py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fas fa-images mr-1"></i>免费图库
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto mobile-padding px-4 py-6 landscape-compact">
+    <!-- 统计信息 -->
+    <section class="mb-6 lg:mb-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 mobile-stats">
+        <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-3 lg:p-4 rounded-xl text-center card-responsive-padding">
+          <div class="text-xl lg:text-2xl font-bold text-responsive-lg">502+</div>
+          <div class="text-xs lg:text-sm opacity-90 mobile-text-sm">精选工具</div>
+        </div>
+        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-3 lg:p-4 rounded-xl text-center card-responsive-padding">
+          <div class="text-xl lg:text-2xl font-bold text-responsive-lg">16</div>
+          <div class="text-xs lg:text-sm opacity-90 mobile-text-sm">主要分类</div>
+        </div>
+        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-3 lg:p-4 rounded-xl text-center card-responsive-padding">
+          <div class="text-xl lg:text-2xl font-bold text-responsive-lg">100K+</div>
+          <div class="text-xs lg:text-sm opacity-90 mobile-text-sm">月访问量</div>
+        </div>
+        <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-3 lg:p-4 rounded-xl text-center card-responsive-padding">
+          <div class="text-xl lg:text-2xl font-bold text-responsive-lg">4.8</div>
+          <div class="text-xs lg:text-sm opacity-90 mobile-text-sm">用户评分</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 每日推荐 -->
+    <section class="mb-6 lg:mb-8">
+      <div class="flex flex-col space-y-2 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 mb-4 lg:mb-6">
+        <h2 class="text-xl lg:text-2xl font-semibold flex items-center text-responsive-xl">
+          <i class="fas fa-fire text-orange-500 mr-2"></i>每日推荐
+        </h2>
+        <span class="text-xs lg:text-sm text-gray-500 mobile-hidden">基于用户热度和专业评测</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mobile-cards">
+        <div class="gradient-bg text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Midjourney</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">目前最强大的AI图像生成工具，艺术质量极高，适合专业设计师和艺术创作者。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">AI生成</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">艺术风格</span>
+            </div>
+            <a href="https://www.midjourney.com" target="_blank" class="bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Remove.bg</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="ml-1 text-sm">4.6</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">一键智能抠图，5秒移除背景，支持批量处理，电商产品图必备工具。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">抠图</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">批量处理</span>
+            </div>
+            <a href="https://www.remove.bg" target="_blank" class="bg-white text-pink-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 主要分类导航 -->
+    <section class="mb-8 lg:mb-12">
+      <div class="flex flex-col space-y-2 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 mb-4 lg:mb-6">
+        <h2 class="text-xl lg:text-2xl font-semibold flex items-center text-responsive-xl">
+          <i class="fas fa-th-large text-blue-500 mr-2"></i>精选工具推荐
+        </h2>
+        <div class="text-xs lg:text-sm text-gray-500 mobile-hidden">502+精选工具，每日更新推荐</div>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6 mobile-cards">
+        <!-- AI图片生成 -->
+        <div class="gradient-bg text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Midjourney</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">目前最强大的AI图像生成工具，艺术质量极高，适合专业设计师和艺术创作者。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">AI生成</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">艺术风格</span>
+            </div>
+            <a href="https://www.midjourney.com" target="_blank" class="bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Leonardo AI</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">强大的AI图像生成平台，支持多种艺术风格，适合创意工作者和设计师。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">AI生成</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://leonardo.ai" target="_blank" class="bg-white text-green-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Bing Create</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">微软推出的AI图像生成工具，集成在Bing搜索中，操作简单，效果优秀。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">AI生成</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://www.bing.com/images/create" target="_blank" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Canva AI</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">Canva推出的AI图像生成功能，与设计工具完美集成，适合设计师使用。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">AI生成</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">限免使用</span>
+            </div>
+            <a href="https://www.canva.com/ai-image-generator/" target="_blank" class="bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 抠图换背景 -->
+        <div class="bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Remove.bg</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="ml-1 text-sm">4.6</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">一键智能抠图，5秒移除背景，支持批量处理，电商产品图必备工具。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">抠图</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">批量处理</span>
+            </div>
+            <a href="https://www.remove.bg" target="_blank" class="bg-white text-pink-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">PhotoRoom</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">专业的AI抠图工具，支持多种背景替换，适合电商和设计工作。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">抠图</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">限免使用</span>
+            </div>
+            <a href="https://www.photoroom.com" target="_blank" class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Cutout Pro</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">功能全面的AI抠图工具，支持多种格式，免费使用，效果优秀。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">抠图</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://www.cutout.pro" target="_blank" class="bg-white text-teal-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 图片修复增强 -->
+        <div class="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Let's Enhance</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">专业的AI图像增强工具，支持超分辨率、降噪、修复等功能，效果卓越。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">修复增强</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">限免使用</span>
+            </div>
+            <a href="https://www.letsenhance.io" target="_blank" class="bg-white text-green-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">GFPGAN</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">开源的AI人脸修复工具，专门用于老照片修复和人脸增强，效果优秀。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">人脸修复</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://huggingface.co/spaces/akhaliq/GFPGAN" target="_blank" class="bg-white text-orange-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-500 to-sky-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Upscale Media</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">简单易用的AI图像放大工具，支持多种格式，免费使用，效果良好。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">图像放大</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://www.upscale.media" target="_blank" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 图片压缩优化 -->
+        <div class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">TinyPNG</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">最受欢迎的在线图片压缩工具，支持PNG和JPEG格式，压缩率高，质量优秀。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">图片压缩</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://tinypng.com" target="_blank" class="bg-white text-orange-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Image Compressor</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">功能全面的在线图片压缩工具，支持多种格式，可调节压缩质量。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">图片压缩</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://imagecompressor.com" target="_blank" class="bg-white text-red-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">PicDiet</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">智能图片压缩工具，支持中文界面，操作简单，压缩效果优秀。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">图片压缩</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://www.picdiet.com/zh-cn" target="_blank" class="bg-white text-emerald-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 免费图库 -->
+        <div class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Unsplash</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">全球最大的免费高质量图片库，提供数百万张精美照片，适合各种设计需求。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费图库</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">高质量</span>
+            </div>
+            <a href="https://unsplash.com" target="_blank" class="bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Pixabay</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">提供免费图片、插图和矢量图的综合平台，支持多种语言，素材丰富多样。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费图库</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">多语言</span>
+            </div>
+            <a href="https://pixabay.com" target="_blank" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Pexels</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">提供高质量免费照片和视频素材，界面简洁，搜索功能强大，适合设计师使用。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费图库</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">视频素材</span>
+            </div>
+            <a href="https://www.pexels.com" target="_blank" class="bg-white text-green-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 风格转换 -->
+        <div class="bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">PromeAI</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">专业的AI风格转换工具，支持多种艺术风格，效果逼真，适合创意设计。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">风格转换</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">限免使用</span>
+            </div>
+            <a href="https://www.promeai.pro" target="_blank" class="bg-white text-rose-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">DeepArt</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">经典的AI艺术风格转换工具，支持多种艺术风格，操作简单，效果优秀。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">风格转换</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">免费使用</span>
+            </div>
+            <a href="https://deepart.io" target="_blank" class="bg-white text-violet-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- AI图片编辑 -->
+        <div id="ai-edit" class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">Krea AI</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ml-1 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">强大的AI图片编辑工具，支持实时编辑、风格转换、智能修复等功能，操作直观。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">AI编辑</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">实时编辑</span>
+            </div>
+            <a href="https://www.krea.ai/edit" target="_blank" class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-2xl p-4 lg:p-6 shadow-xl card-hover card-responsive-padding">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 space-y-2 lg:space-y-0">
+            <h3 class="text-lg lg:text-xl font-bold text-responsive-lg">BFL AI Playground</h3>
+            <div class="flex text-yellow-300 items-center">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="ml-1 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="text-sm opacity-90 mb-4 mobile-text-sm">专业的AI图片编辑平台，提供多种编辑功能，界面友好，适合专业设计师使用。</p>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-3 lg:space-y-0 mobile-flex-col">
+            <div class="flex space-x-2">
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">AI编辑</span>
+              <span class="text-xs bg-white bg-opacity-20 px-2 py-1 rounded">专业工具</span>
+            </div>
+            <a href="https://playground.bfl.ai/image/edit" target="_blank" class="bg-white text-cyan-600 px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center mobile-w-full mobile-mt-2 min-h-[44px] flex items-center justify-center">
+              立即使用 <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 额外信息和统计 -->
+  <section class="max-w-7xl mx-auto mobile-padding px-4 py-8 lg:py-12 bg-gray-50 dark:bg-gray-800 rounded-2xl mb-6 lg:mb-8">
+    <div class="text-center mb-6 lg:mb-8">
+      <h2 class="text-xl lg:text-2xl font-bold mb-4 text-responsive-xl">为什么选择我们？</h2>
+      <p class="text-sm lg:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mobile-text-sm">
+        我们精心收集和测试了502+AI图片处理工具，为你提供最全面、最实用的导航服务。每个工具都经过专业评测，确保质量和可用性。
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <div class="text-center p-4 lg:p-0">
+        <div class="w-12 h-12 lg:w-16 lg:h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-award text-white text-lg lg:text-2xl"></i>
+        </div>
+        <h3 class="font-bold mb-2 text-base lg:text-lg text-responsive-lg">精选优质工具</h3>
+        <p class="text-xs lg:text-sm text-gray-600 dark:text-gray-300 mobile-text-sm">每个工具都经过专业测试和用户反馈验证</p>
+      </div>
+      
+      <div class="text-center p-4 lg:p-0">
+        <div class="w-12 h-12 lg:w-16 lg:h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-sync-alt text-white text-lg lg:text-2xl"></i>
+        </div>
+        <h3 class="font-bold mb-2 text-base lg:text-lg text-responsive-lg">实时更新</h3>
+        <p class="text-xs lg:text-sm text-gray-600 dark:text-gray-300 mobile-text-sm">工具状态实时监控，链接失效及时更新</p>
+      </div>
+      
+      <div class="text-center p-4 lg:p-0">
+        <div class="w-12 h-12 lg:w-16 lg:h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-users text-white text-lg lg:text-2xl"></i>
+        </div>
+        <h3 class="font-bold mb-2 text-base lg:text-lg text-responsive-lg">用户共建</h3>
+        <p class="text-xs lg:text-sm text-gray-600 dark:text-gray-300 mobile-text-sm">基于10万+用户使用反馈，持续优化推荐</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-8 lg:py-12">
+    <div class="max-w-7xl mx-auto mobile-padding px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 footer-mobile">
+        <div class="space-y-4">
+          <div class="text-lg lg:text-xl font-bold flex items-center justify-center lg:justify-start text-responsive-lg">
+            <i class="fas fa-magic mr-2"></i>AI图片处理导航
+          </div>
+          <p class="text-gray-300 text-sm mobile-text-sm text-center lg:text-left">最全面的AI图片处理工具导航，助力你的创意工作。</p>
+          <div class="flex space-x-4 justify-center lg:justify-start">
+            <a href="#" class="text-gray-400 hover:text-white min-h-[44px] flex items-center"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white min-h-[44px] flex items-center"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white min-h-[44px] flex items-center"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <h4 class="font-bold text-center lg:text-left">热门分类</h4>
+          <ul class="space-y-2 text-sm text-center lg:text-left">
+            <li><a href="#ai-generate" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">AI图片生成</a></li>
+            <li><a href="#background-remove" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">抠图换背景</a></li>
+            <li><a href="#enhance-repair" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">修复增强</a></li>
+            <li><a href="#compress" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">压缩优化</a></li>
+          </ul>
+        </div>
+        
+        <div class="space-y-4">
+          <h4 class="font-bold text-center lg:text-left">关于我们</h4>
+          <ul class="space-y-2 text-sm text-center lg:text-left">
+            <li><a href="#" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">联系我们</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">提交工具</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">反馈建议</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white min-h-[44px] inline-flex items-center">隐私政策</a></li>
+          </ul>
+        </div>
+        
+        <div class="space-y-4">
+          <h4 class="font-bold text-center lg:text-left">统计信息</h4>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between lg:justify-start lg:space-x-4">
+              <span class="text-gray-300">收录工具:</span>
+              <span class="text-white font-bold">502+</span>
+            </div>
+            <div class="flex justify-between lg:justify-start lg:space-x-4">
+              <span class="text-gray-300">月访问量:</span>
+              <span class="text-white font-bold">100K+</span>
+            </div>
+            <div class="flex justify-between lg:justify-start lg:space-x-4">
+              <span class="text-gray-300">用户评分:</span>
+              <span class="text-white font-bold">4.8/5</span>
+            </div>
+            <div class="flex justify-between lg:justify-start lg:space-x-4">
+              <span class="text-gray-300">更新频率:</span>
+              <span class="text-white font-bold">每日</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-6 lg:mt-8 pt-6 lg:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="text-sm text-gray-400 text-center md:text-left mobile-text-sm">
+          &copy; 2025 AI图片处理导航. All rights reserved. 
+        </div>
+        <div class="text-sm text-gray-400 text-center md:text-right mobile-text-sm">
+          Made with <i class="fas fa-heart text-red-500"></i> for creators worldwide
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript 功能 -->
+  <script>
+    // 主题切换功能
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+      
+      if (currentTheme === 'dark') {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // 页面加载时设置主题
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    });
+
+    // 搜索功能 - 移动端优化
+    let searchTimeout;
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      
+      // 防抖处理，提升移动端性能
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        const categoryCards = document.querySelectorAll('[id*="-"]');
+        
+        categoryCards.forEach(card => {
+          const tools = card.querySelectorAll('a[href*="http"]');
+          let hasMatch = false;
+          
+          tools.forEach(tool => {
+            const toolText = tool.textContent.toLowerCase();
+            const toolContainer = tool.closest('.tool-item-mobile, [class*="py-"]');
+            
+            if (toolText.includes(searchTerm) || searchTerm === '') {
+              if (toolContainer) toolContainer.style.display = '';
+              hasMatch = true;
+            } else {
+              if (toolContainer) toolContainer.style.display = 'none';
+            }
+          });
+          
+          // 隐藏没有匹配工具的整个分类卡片
+          if (searchTerm !== '' && !hasMatch) {
+            card.style.display = 'none';
+          } else {
+            card.style.display = '';
+          }
+        });
+        
+        // 搜索结果提示
+        const visibleCards = Array.from(categoryCards).filter(card => 
+          card.style.display !== 'none'
+        );
+        
+        if (searchTerm !== '' && visibleCards.length === 0) {
+          showSearchNoResults();
+        } else {
+          hideSearchNoResults();
+        }
+      }, 300);
+    });
+
+    // 搜索无结果提示
+    function showSearchNoResults() {
+      let noResultsDiv = document.getElementById('searchNoResults');
+      if (!noResultsDiv) {
+        noResultsDiv = document.createElement('div');
+        noResultsDiv.id = 'searchNoResults';
+        noResultsDiv.className = 'text-center py-12 text-gray-500';
+        noResultsDiv.innerHTML = `
+          <i class="fas fa-search text-4xl mb-4 text-gray-300"></i>
+          <h3 class="text-lg font-semibold mb-2">未找到匹配的工具</h3>
+          <p class="text-sm">试试其他关键词，或浏览所有分类</p>
+        `;
+        document.querySelector('main').appendChild(noResultsDiv);
+      }
+      noResultsDiv.style.display = 'block';
+    }
+
+    function hideSearchNoResults() {
+      const noResultsDiv = document.getElementById('searchNoResults');
+      if (noResultsDiv) {
+        noResultsDiv.style.display = 'none';
+      }
+    }
+
+    // 平滑滚动到锚点
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // 访问量统计（模拟）
+    function updateVisitCount() {
+      const count = localStorage.getItem('visitCount') || 1234;
+      const newCount = parseInt(count) + Math.floor(Math.random() * 10) + 1;
+      localStorage.setItem('visitCount', newCount);
+      
+      const visitElement = document.getElementById('todayVisits');
+      if (visitElement) {
+        visitElement.textContent = newCount.toLocaleString();
+      }
+    }
+
+    // 页面加载完成后更新访问量
+    document.addEventListener('DOMContentLoaded', updateVisitCount);
+
+    // 工具链接点击统计和移动端优化
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.addEventListener('click', function() {
+        // 统计代码
+        console.log('Tool clicked:', this.textContent, this.href);
+        
+        // Google Analytics 事件追踪
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'tool_click', {
+            'tool_name': this.textContent.trim(),
+            'tool_url': this.href
+          });
+        }
+      });
+    });
+
+    // 移动端特定功能
+    function initMobileFeatures() {
+      // 检测移动设备
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // 移动端触摸反馈
+        document.querySelectorAll('.card-hover, .tool-item-mobile').forEach(element => {
+          element.addEventListener('touchstart', function() {
+            this.style.opacity = '0.7';
+          });
+          
+          element.addEventListener('touchend', function() {
+            setTimeout(() => {
+              this.style.opacity = '';
+            }, 150);
+          });
+        });
+
+        // 阻止移动端双击放大
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+          const now = (new Date()).getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        }, false);
+
+        // 移动端搜索框焦点优化
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('focus', function() {
+          // 延迟滚动，避免键盘弹出时的问题
+          setTimeout(() => {
+            this.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'center' 
+            });
+          }, 300);
+        });
+      }
+    }
+
+    // 视口变化监听 - 响应式优化
+    function handleViewportChange() {
+      const width = window.innerWidth;
+      const header = document.querySelector('header');
+      
+      // 小屏幕时调整header样式
+      if (width < 768) {
+        header.classList.add('mobile-header');
+      } else {
+        header.classList.remove('mobile-header');
+      }
+    }
+
+    // 页面性能优化 - 懒加载图标
+    function lazyLoadIcons() {
+      const icons = document.querySelectorAll('i[class*="fa"]');
+      icons.forEach(icon => {
+        // 只在图标进入视口时加载
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+        
+        icon.style.opacity = '0';
+        icon.style.transition = 'opacity 0.3s ease';
+        observer.observe(icon);
+      });
+    }
+
+    // 初始化所有移动端功能
+    document.addEventListener('DOMContentLoaded', function() {
+      initMobileFeatures();
+      handleViewportChange();
+      lazyLoadIcons();
+    });
+
+    // 监听视口变化
+    window.addEventListener('resize', handleViewportChange);
+    window.addEventListener('orientationchange', function() {
+      setTimeout(handleViewportChange, 100);
+    });
+  </script>
+</body>
+</html>

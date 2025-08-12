@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>祈祷之树 - 心灵祈祷平台</title>
+    <meta name="description" content="祈祷之树 - 在宁静的夜空下，点击发光树叶感受温暖的祈祷，为心灵带来片刻安宁">
+    <meta name="keywords" content="祈祷,心灵,安宁,祝福,祈祷之树">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --night-sky: #0a0a0f;
+            --star-color: #ffffff;
+            --leaf-colors: [
+                #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57,
+                #ff9ff3, #54a0ff, #5f27cd, #00d2d3, #ff9f43
+            ];
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--night-sky);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        /* 夜空背景 */
+        .night-sky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            z-index: -2;
+        }
+        
+        /* 星星效果 */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background: var(--star-color);
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        /* 树干 */
+        .tree-trunk {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 300px;
+            background: linear-gradient(45deg, #8B4513, #A0522D, #CD853F);
+            border-radius: 60px 60px 0 0;
+            box-shadow: 
+                inset -10px 0 20px rgba(0,0,0,0.3),
+                inset 10px 0 20px rgba(0,0,0,0.3),
+                0 0 30px rgba(139, 69, 19, 0.5);
+            z-index: 1;
+        }
+        
+        .tree-trunk::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 40px;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            border-radius: 40px 40px 0 0;
+            box-shadow: 
+                inset -5px 0 10px rgba(0,0,0,0.3),
+                inset 5px 0 10px rgba(0,0,0,0.3);
+        }
+        
+        /* 树叶 */
+        .leaf {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50% 0 50% 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: float 4s ease-in-out infinite;
+            box-shadow: 0 0 20px currentColor;
+            z-index: 2;
+        }
+        
+        .leaf:hover {
+            transform: scale(1.3) rotate(15deg);
+            box-shadow: 0 0 40px currentColor;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        /* 树叶位置和颜色 */
+        .leaf-1 { top: 20%; left: 35%; background: #ff6b6b; animation-delay: 0s; }
+        .leaf-2 { top: 15%; left: 55%; background: #4ecdc4; animation-delay: 0.5s; }
+        .leaf-3 { top: 25%; left: 70%; background: #45b7d1; animation-delay: 1s; }
+        .leaf-4 { top: 35%; left: 25%; background: #96ceb4; animation-delay: 1.5s; }
+        .leaf-5 { top: 30%; left: 80%; background: #feca57; animation-delay: 2s; }
+        .leaf-6 { top: 45%; left: 15%; background: #ff9ff3; animation-delay: 2.5s; }
+        .leaf-7 { top: 40%; left: 85%; background: #54a0ff; animation-delay: 3s; }
+        .leaf-8 { top: 55%; left: 20%; background: #5f27cd; animation-delay: 3.5s; }
+        .leaf-9 { top: 50%; left: 75%; background: #00d2d3; animation-delay: 4s; }
+        .leaf-10 { top: 65%; left: 50%; background: #ff9f43; animation-delay: 4.5s; }
+        
+        /* 弹窗样式 */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1);
+        }
+        
+        .prayer-title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        .prayer-text {
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .prayer-blessing {
+            color: #ffd700;
+            font-style: italic;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* 页面标题 */
+        .page-title {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 10;
+        }
+        
+        .page-subtitle {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ccc;
+            font-size: 18px;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .tree-trunk {
+                width: 80px;
+                height: 200px;
+            }
+            
+            .leaf {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .page-title {
+                font-size: 28px;
+                top: 30px;
+            }
+            
+            .page-subtitle {
+                font-size: 16px;
+                top: 70px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            .prayer-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 夜空背景 -->
+    <div class="night-sky"></div>
+    
+    <!-- 星星 -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- 页面标题 -->
+    <h1 class="page-title">祈祷之树</h1>
+    <p class="page-subtitle">点击树叶，感受心灵的温暖</p>
+    
+    <!-- 树干 -->
+    <div class="tree-trunk"></div>
+    
+    <!-- 树叶 -->
+    <div class="leaf leaf-1" data-prayer="peace"></div>
+    <div class="leaf leaf-2" data-prayer="health"></div>
+    <div class="leaf leaf-3" data-prayer="family"></div>
+    <div class="leaf leaf-4" data-prayer="dreams"></div>
+    <div class="leaf leaf-5" data-prayer="friendship"></div>
+    <div class="leaf leaf-6" data-prayer="wisdom"></div>
+    <div class="leaf leaf-7" data-prayer="gratitude"></div>
+    <div class="leaf leaf-8" data-prayer="hope"></div>
+    <div class="leaf leaf-9" data-prayer="nature"></div>
+    <div class="leaf leaf-10" data-prayer="love"></div>
+    
+    <!-- 弹窗 -->
+    <div class="modal" id="prayerModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 class="prayer-title" id="prayerTitle"></h2>
+            <p class="prayer-text" id="prayerText"></p>
+            <p class="prayer-blessing" id="prayerBlessing"></p>
+        </div>
+    </div>
+
+    <script>
+        // 祈祷内容数据
+        const prayers = {
+            peace: {
+                title: "平安祈祷",
+                text: "愿您的心灵如平静的湖面，波澜不惊。愿您的生活如春风般温柔，如秋月般宁静。愿平安如影随形，守护您的每一个日夜。",
+                blessing: "愿平安与您同在，直到永远。"
+            },
+            health: {
+                title: "健康祈祷",
+                text: "愿您的身体如青松般挺拔，如流水般清澈。愿您的精神如朝阳般充满活力，如星空般璀璨明亮。愿健康常伴左右，让生命之花绽放光彩。",
+                blessing: "愿健康与您同行，生命如花般绚烂。"
+            },
+            family: {
+                title: "家庭祈祷",
+                text: "愿您的家庭如温暖的港湾，包容每一个疲惫的心灵。愿亲情如春风般温柔，如阳光般温暖。愿家庭和睦，幸福美满，让爱在每一个角落流淌。",
+                blessing: "愿家庭和睦，幸福美满，爱意永存。"
+            },
+            dreams: {
+                title: "梦想祈祷",
+                text: "愿您的梦想如星辰般闪耀，如彩虹般绚丽。愿您的坚持如磐石般坚定，如流水般不息。愿梦想成真，让心中的光芒照亮前行的道路。",
+                blessing: "愿梦想成真，光芒万丈，前程似锦。"
+            },
+            friendship: {
+                title: "友谊祈祷",
+                text: "愿您的友谊如美酒般醇厚，如清泉般纯净。愿朋友如明灯般指引方向，如春风般温暖心灵。愿友谊长存，让真情在岁月中愈发珍贵。",
+                blessing: "愿友谊长存，真情永驻，温暖如初。"
+            },
+            wisdom: {
+                title: "智慧祈祷",
+                text: "愿您的智慧如大海般深邃，如高山般巍峨。愿您的思考如明镜般清晰，如利剑般锋利。愿智慧之光指引您走向更美好的未来。",
+                blessing: "愿智慧如灯，照亮前路，指引方向。"
+            },
+            gratitude: {
+                title: "感恩祈祷",
+                text: "愿您的心中常怀感恩，如花朵般绽放美好。愿您珍惜身边的每一份温暖，如珍宝般珍藏。愿感恩之心让生活更加美好，让心灵更加纯净。",
+                blessing: "愿感恩常在，美好永驻，心灵纯净。"
+            },
+            hope: {
+                title: "希望祈祷",
+                text: "愿您的希望如朝阳般温暖，如星光般明亮。愿您的信念如磐石般坚定，如流水般不息。愿希望之光驱散黑暗，让未来充满无限可能。",
+                blessing: "愿希望如光，驱散黑暗，照亮未来。"
+            },
+            nature: {
+                title: "自然祈祷",
+                text: "愿您与自然和谐共处，如清风般自由，如流水般纯净。愿您珍惜大自然的恩赐，如珍宝般爱护。愿自然之美净化心灵，让生命更加美好。",
+                blessing: "愿与自然和谐，心灵纯净，生命美好。"
+            },
+            love: {
+                title: "爱的祈祷",
+                text: "愿您的爱如春风般温柔，如阳光般温暖。愿您的爱心如大海般宽广，如星空般深邃。愿爱意永存，让世界因爱而更加美好。",
+                blessing: "愿爱意永存，温暖如春，美好如花。"
+            }
+        };
+
+        // 生成星星
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 200;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // 显示祈祷弹窗
+        function showPrayer(prayerType) {
+            const prayer = prayers[prayerType];
+            if (prayer) {
+                document.getElementById('prayerTitle').textContent = prayer.title;
+                document.getElementById('prayerText').textContent = prayer.text;
+                document.getElementById('prayerBlessing').textContent = prayer.blessing;
+                document.getElementById('prayerModal').classList.add('active');
+            }
+        }
+
+        // 关闭弹窗
+        function closeModal() {
+            document.getElementById('prayerModal').classList.remove('active');
+        }
+
+        // 绑定树叶点击事件
+        document.querySelectorAll('.leaf').forEach(leaf => {
+            leaf.addEventListener('click', () => {
+                const prayerType = leaf.getAttribute('data-prayer');
+                showPrayer(prayerType);
+            });
+        });
+
+        // 点击弹窗外部关闭
+        document.getElementById('prayerModal').addEventListener('click', (e) => {
+            if (e.target.id === 'prayerModal') {
+                closeModal();
+            }
+        });
+
+        // ESC键关闭弹窗
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // 页面加载时生成星星
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+        });
+
+        // 添加树叶点击音效（可选）
+        function playLeafSound() {
+            // 这里可以添加音效代码
+            console.log('树叶被点击了');
+        }
+
+        // 为树叶添加点击音效
+        document.querySelectorAll('.leaf').forEach(leaf => {
+            leaf.addEventListener('click', playLeafSound);
+        });
+    </script>
+</body>
+</html> 

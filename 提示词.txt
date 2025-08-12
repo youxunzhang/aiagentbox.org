@@ -1,0 +1,314 @@
+你是一位精通谷歌seo和html&TAILwind语法的十年全栈工程师
+
+你要做的网站域名是一个导航站
+关键词是AI工具导航
+
+功能是快捷跳转到各大AI工具页面，可参考“https://seodog.cn/”
+网站拥有的链接参考如下
+
+
+
+大模型
+
+豆包 https://www.doubao.com/chat/
+Deepseek https://chat.deepseek.com/
+谷歌gemini https://gemini.google.com/app
+朱雀大模型检测 https://matrix.tencent.com/ai-detect/ 
+AI搜索 https://www.perplexity.ai/
+Grok  https://x.ai/ https://grok.com/
+Claude https://claude.ai/download Claude
+阿里通义 https://www.aliyun.com/
+ 
+文字处理
+https://flomoapp.com/ flomo 
+get笔记 https://www.biji.com/ 
+monica https://monica.im/
+
+图片处理
+
+
+无版权网站 https://pixabay.com/
+即梦国际版 https://dreamina.capcut.com/ai-tool/home/ 
+图片提示词 https://lexica.art/ 
+图片背景消除 https://www.remove.bg/zh 
+图片分享网站 https://unsplash.com/
+AI生成图像 https://raphael.app/zh
+
+视频处理
+heygen https://app.heygen.com/
+剪映国际版 https://www.capcut.cn/  
+
+海螺 https://hailuoai.com/ 
+
+pika https://pika.art/about 
+
+即梦 https://jimeng.jianying.com/ 
+
+可灵 https://app.klingai.com/cn/ 
+
+runway https://runwayml.com/ 
+Sora https://openai.com/sora/ 
+
+
+
+智能体
+扣子 https://space.coze.cn/
+
+声音处理
+Fish audio 配音工具  
+https://fish.audio/
+https://ttsmaker.cn/
+https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643
+声音克隆 https://anyvoice.net/zh
+
+
+编程
+cursor https://www.cursor.com/cn 
+windsurf https://windsurf.com/ 
+https://code.visualstudio.com/Download
+https://agent.minimax.io/
+https://bolt.new/
+https://carrd.co/ 单页网站
+https://tailwindcss.com/ 网站生成
+https://template.typeform.com/to/zDzdJ3Me 待支付的调查问卷
+
+网站
+
+cloudflare https://www.cloudflare.com/zh-cn/
+vercel https://vercel.com/
+domain https://www.domain.com/ 
+
+theresanaiforthat https://theresanaiforthat.com/
+toolify.ai https://www.toolify.ai/Best-AI-Tools-revenue
+readmake https://readmake.com/ 
+
+tailwindcss https://tailwindcss.com/
+
+themeforest https://themeforest.net/
+
+阿里云 https://www.aliyun.com/
+腾讯云 https://cloud.tencent.com/
+
+AI助手
+
+pollo https://pollo.ai/
+hix https://hix.ai/ 
+
+社交媒体
+
+小红书 https://www.xiaohongshu.com/explore
+热点查询 https://felo.ai/search 
+腾讯公众号 https://mp.weixin.qq.com/
+微博 https://weibo.com/
+豆瓣 https://www.douban.com/
+B站 https://www.bilibili.com/
+知乎 https://www.zhihu.com/
+今日头条 https://www.toutiao.com/
+
+其他常用
+
+小红书卡片 https://md2card.com/ 
+视频下载 https://dlpanda.com/zh-CN/xiaohongshu 
+PPT生成 gamma.app
+网站出海 https://scys.com/articleDetail/xq_topic/8852585812152582
+巧思胜苦干 https://notebooklm.google/  
+个人开发者 https://jeannen.com/ 
+海外新产品发布的圣地 https://www.producthunt.com/  
+YC https://news.ycombinator.com/show  
+每个月最赚钱的Top 100产品 https://seo.box/referring/ 
+AI产品导航网站 https://www.toolify.ai/zh/  
+AI产品导航网站 https://theresanaiforthat.com/ 
+GPT商店 https://www.gptshunter.com/ 
+临时邮件网站 https://temp-mail.org/zh/  
+https://www.trae.com.cn/
+国内多模型 https://docs.cherry-ai.com/ 
+新趣集 https://xinquji.com/
+stackoverflow https://stackoverflow.co/
+
+金融
+https://www.creem.io/
+
+数据分析
+https://analytics.google.com/
+
+请帮我输出一个完整版HTML和CSS代码，
+
+
+
+要求这个网站在PC和移动端适配性良好，
+配色才用苹果典型色系，
+包含一个以及H1标签和多个H2标签，
+
+
+地图页面
+
+你是一位精通谷歌seo和html&TAILwind语法的十年全栈工程师
+
+你要做的网站的地图，也就是sitemap
+关键词是AI工具导航
+参考“https://seodog.cn/”
+帮我创建网站地图
+要求这个网站在PC和移动端适配性良好，
+配色才用苹果典型色系，
+包含一个以及H1标签和多个H2标签，
+
+
+
+你是一位精通谷歌seo和html&TAILwind语法的十年全栈工程师
+
+你要做的网站域名是一个导航站,菜单导航栏在左侧
+关键词是AI工具导航
+
+功能是快捷跳转到各大AI工具页面，可参考“https://seodog.cn/”
+网站拥有的链接参考如下
+
+
+
+
+大模型
+
+豆包 https://www.doubao.com/chat/
+Deepseek https://chat.deepseek.com/
+谷歌gemini https://gemini.google.com/app
+朱雀大模型检测 https://matrix.tencent.com/ai-detect/ 
+AI搜索 https://www.perplexity.ai/
+Grok  https://x.ai/ https://grok.com/
+Claude https://claude.ai/download Claude
+阿里通义 https://www.aliyun.com/
+ 
+文字处理
+https://flomoapp.com/ flomo 
+get笔记 https://www.biji.com/ 
+monica https://monica.im/
+
+图片处理
+
+无版权网站 https://pixabay.com/
+即梦国际版 https://dreamina.capcut.com/ai-tool/home/ 
+图片提示词 https://lexica.art/ 
+图片背景消除 https://www.remove.bg/zh 
+图片分享网站 https://unsplash.com/
+AI生成图像 https://raphael.app/zh
+
+视频处理
+heygen https://app.heygen.com/
+剪映国际版 https://www.capcut.cn/  
+
+海螺 https://hailuoai.com/ 
+
+pika https://pika.art/about 
+
+即梦 https://jimeng.jianying.com/ 
+
+可灵 https://app.klingai.com/cn/ 
+
+runway https://runwayml.com/ 
+Sora https://openai.com/sora/ 
+
+
+声音处理
+Fish audio 配音工具  
+https://fish.audio/
+https://ttsmaker.cn/
+https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643
+声音克隆 https://anyvoice.net/zh
+
+
+编程
+扣子 https://space.coze.cn/
+cursor https://www.cursor.com/cn 
+windsurf https://windsurf.com/ 
+https://code.visualstudio.com/Download
+https://agent.minimax.io/
+https://bolt.new/
+https://carrd.co/ 单页网站
+https://tailwindcss.com/ 网站生成
+https://template.typeform.com/to/zDzdJ3Me 待支付的调查问卷
+
+网站
+
+cloudflare https://www.cloudflare.com/zh-cn/
+vercel https://vercel.com/
+domain https://www.domain.com/ 
+
+theresanaiforthat https://theresanaiforthat.com/
+toolify.ai https://www.toolify.ai/Best-AI-Tools-revenue
+readmake https://readmake.com/ 
+
+tailwindcss https://tailwindcss.com/
+
+themeforest https://themeforest.net/
+
+阿里云 https://www.aliyun.com/
+腾讯云 https://cloud.tencent.com/
+
+ 
+
+社交媒体
+
+小红书 https://www.xiaohongshu.com/explore
+热点查询 https://felo.ai/search 
+腾讯公众号 https://mp.weixin.qq.com/
+微博 https://weibo.com/
+豆瓣 https://www.douban.com/
+B站 https://www.bilibili.com/
+知乎 https://www.zhihu.com/
+今日头条 https://www.toutiao.com/
+
+其他常用
+
+小红书卡片 https://md2card.com/ 
+视频下载 https://dlpanda.com/zh-CN/xiaohongshu 
+PPT生成 gamma.app
+网站出海 https://scys.com/articleDetail/xq_topic/8852585812152582
+巧思胜苦干 https://notebooklm.google/  
+个人开发者 https://jeannen.com/ 
+海外新产品发布的圣地 https://www.producthunt.com/  
+YC https://news.ycombinator.com/show  
+每个月最赚钱的Top 100产品 https://seo.box/referring/ 
+AI产品导航网站 https://www.toolify.ai/zh/  
+AI产品导航网站 https://theresanaiforthat.com/ 
+GPT商店 https://www.gptshunter.com/ 
+临时邮件网站 https://temp-mail.org/zh/  
+https://www.trae.com.cn/
+国内多模型 https://docs.cherry-ai.com/ 
+新趣集 https://xinquji.com/
+stackoverflow https://stackoverflow.co/
+
+ 
+
+数据分析
+https://analytics.google.com/
+google ads https://adsense.google.com/start/
+https://trends.google.com/ 
+https://ads.google.com/
+https://www.cloudflare.com/zh-cn/
+https://www.spaceship.com/  
+bolt.new
+trickle.so
+Github copilot
+https://cloud.onlinegames.io
+https://www.kaogujia.com/
+https://yemashuju.com/web/
+
+
+
+请帮我输出一个完整版HTML和CSS代码，
+
+
+
+要求这个网站在PC和移动端适配性良好，
+配色才用苹果典型色系，
+包含一个以及H1标签和多个H2标签，
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐家 - 探索无限音乐可能 | 音乐网站地图</title>
+    <meta name="description" content="音乐家(yinyuejia.cn)为您提供最全面的音乐网站导航。收录了QQ音乐、网易云音乐等主流平台，以及吉他谱、DJ混音、在线K歌等特色音乐网站，是您探索音乐世界的最佳起点。">
+    <meta name="keywords" content="音乐家, 音乐网站, 音乐平台, 在线听歌, 音乐导航, sitemap">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-indigo: #6366F1;
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            --primary-rose: #F43F5E;
+            --primary-orange: #F97316;
+            --primary-amber: #F59E0B;
+            --primary-yellow: #EAB308;
+            --primary-lime: #84CC16;
+            --primary-green: #22C55E;
+            --primary-emerald: #10B981;
+            --primary-teal: #14B8A6;
+            --primary-cyan: #06B6D4;
+            --primary-sky: #0EA5E9;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .music-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .music-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .music-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .music-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple), var(--primary-pink));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .floating-animation {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .section-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px) scale(0.95); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+        
+        .stagger-animation {
+            animation: staggerFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        @keyframes staggerFadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        .block.bg-white {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .block.bg-white::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .block.bg-white:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .block.bg-white:hover::before {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AI</span>
+                    </div>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        音乐导航
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://www.seodog.cn" class="text-blue-600 hover:underline text-sm font-semibold">首页</a>
+                    <a href="img.html" class="text-blue-600 hover:underline text-sm font-semibold">图片导航</a>
+
+                    <a href="chuhai.html" class="text-blue-600 hover:underline text-sm font-semibold">出海</a>
+                    <a href="links.html" class="text-blue-600 hover:underline text-sm font-semibold">友情链接</a>
+                    <a href="music.html" class="text-blue-600 hover:underline text-sm font-semibold">音乐导航</a>
+                    <a href="designer.html" class="text-blue-600 hover:underline text-sm font-semibold">设计师导航</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-20 mb-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="floating-animation mb-8">
+                <div class="w-24 h-24 bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                    <span class="text-white font-bold text-3xl">🎵</span>
+                </div>
+            </div>
+            <h1 class="gradient-text text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                音乐家导航
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-light">
+                全能音乐网站地图，为所有音乐爱好者精心打造
+            </p>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 pb-16">
+
+        <main>
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="text-2xl font-bold gradient-text p-6 mb-0">
+                        主流音乐平台
+                    </h2>
+                    <nav class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-8">
+                    <a href="https://y.qq.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">QQ音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">y.qq.com</p>
+                    </a>
+                    <a href="https://music.163.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">网易云音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">music.163.com</p>
+                    </a>
+                    <a href="https://www.kugou.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">酷狗音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.kugou.com</p>
+                    </a>
+                    <a href="https://www.kuwo.cn" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">酷我音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.kuwo.cn</p>
+                    </a>
+                    <a href="https://www.migu.cn/music.html" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">咪咕音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.migu.cn</p>
+                    </a>
+                    <a href="https://music.taihe.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">千千音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">music.taihe.com</p>
+                    </a>
+                    <a href="https://music.douban.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">豆瓣音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">music.douban.com</p>
+                    </a>
+                    <a href="https://www.1ting.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">一听音乐网</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.1ting.com</p>
+                    </a>
+                    <a href="https://tingwu.aliyun.com/" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">通义听雨</h3>
+                        <p class="text-sm text-gray-500 mt-1">tingwu.aliyun.com</p>
+                    </a>
+                </nav>
+            </section>
+
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="text-2xl font-bold gradient-text p-6 mb-0">
+                        MV与视频音乐
+                    </h2>
+                    <nav class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-8">
+                    <a href="https://music.youku.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">优酷音乐MV</h3>
+                        <p class="text-sm text-gray-500 mt-1">music.youku.com</p>
+                    </a>
+                     <a href="https://y.qq.com/portal/mv_index.html" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">QQ音乐MV</h3>
+                        <p class="text-sm text-gray-500 mt-1">y.qq.com/mv</p>
+                    </a>
+                    <a href="https://www.bilibili.com/music" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">哔哩哔哩音乐</h3>
+                        <p class="text-sm text-gray-500 mt-1">bilibili.com/music</p>
+                    </a>
+                </nav>
+            </section>
+
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="text-2xl font-bold gradient-text p-6 mb-0">
+                        专业工具与社区
+                    </h2>
+                    <nav class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-8">
+                    <a href="https://www.ccjt.net" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">虫虫吉他</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.ccjt.net</p>
+                    </a>
+                    <a href="http://www.qupu123.com/" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">谱天下</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.qupu123.com</p>
+                    </a>
+                    <a href="https://music.china.com.cn" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">中国古曲网</h3>
+                        <p class="text-sm text-gray-500 mt-1">music.china.com.cn</p>
+                    </a>
+                    <a href="https://www.yue365.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">365音乐网</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.yue365.com</p>
+                    </a>
+                    <a href="https://mvsep.com/zh/home" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">音乐与音轨分离</h3>
+                        <p class="text-sm text-gray-500 mt-1">mvsep.com</p>
+                    </a>
+                    <a href="https://vocalremover.org/zh/cutter" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">音频剪辑</h3>
+                        <p class="text-sm text-gray-500 mt-1">vocalremover.org</p>
+                    </a>
+                    <a href="https://www.freeconvert.com/zh/mp3-to-wav" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">FreeConvert</h3>
+                        <p class="text-sm text-gray-500 mt-1">音频格式转换工具</p>
+                    </a>
+                </nav>
+            </section>
+
+            <section class="mb-16 fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="text-2xl font-bold gradient-text p-6 mb-0">
+                        网络电台与DJ
+                    </h2>
+                    <nav class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-8">
+                     <a href="http://www.hbtv.com.cn/zj/ctyygb/" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">楚天音乐广播</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.hbtv.com.cn</p>
+                    </a>
+                    <a href="https://www.vvvdj.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">清风DJ</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.vvvdj.com</p>
+                    </a>
+                    <a href="https://www.djduoduo.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">DJ嗨嗨</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.djduoduo.com</p>
+                    </a>
+                </nav>
+            </section>
+            
+            <section class="fade-in">
+                <div class="section-container overflow-hidden">
+                    <h2 class="text-2xl font-bold gradient-text p-6 mb-0">
+                        K歌娱乐社区
+                    </h2>
+                    <nav class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-8">
+                    <a href="https://kg.qq.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">全民K歌</h3>
+                        <p class="text-sm text-gray-500 mt-1">kg.qq.com</p>
+                    </a>
+                    <a href="https://www.9ku.com" target="_blank" rel="noopener noreferrer" class="block bg-white p-4 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-semibold text-gray-900">九酷音乐网</h3>
+                        <p class="text-sm text-gray-500 mt-1">www.9ku.com</p>
+                    </a>
+                </nav>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 py-6 border-t border-gray-200">
+            <p class="text-gray-500">
+                &copy; 2025 yinyuejia.cn - 音乐家导航. All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

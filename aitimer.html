@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI智能计时器</title>
+    <meta name="description" content="AI智能计时器 - 酷炫的倒计时工具">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        
+        :root {
+            --primary-blue: #3B82F6;
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            --primary-cyan: #06B6D4;
+            --primary-green: #10B981;
+            --primary-orange: #F97316;
+            --primary-red: #EF4444;
+        }
+        
+        body {
+            font-family: 'Orbitron', monospace;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timer-container {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .timer-display {
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { 
+                text-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+                transform: scale(1);
+            }
+            50% { 
+                text-shadow: 0 0 30px rgba(139, 92, 246, 0.9);
+                transform: scale(1.02);
+            }
+        }
+        
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform-origin: 50% 50%;
+        }
+        
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .time-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .time-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+            border: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan));
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, var(--primary-orange), var(--primary-red));
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+        
+        .status-idle { background: var(--primary-cyan); }
+        .status-running { background: var(--primary-green); animation: blink 0.5s infinite; }
+        .status-paused { background: var(--primary-orange); animation: blink 1.5s infinite; }
+        .status-finished { background: var(--primary-red); }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        
+        .preset-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .preset-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(16, 185, 129, 0.9);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            backdrop-filter: blur(10px);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 768px) {
+            .timer-display {
+                font-size: 2rem;
+            }
+            
+            .timer-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <!-- 浮动粒子效果 -->
+    <div class="floating-particles" id="particles"></div>
+    
+    <!-- 主容器 -->
+    <div class="timer-container p-8 max-w-md w-full">
+        <!-- 标题 -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-white mb-2">AI智能计时器</h1>
+            <div class="flex items-center justify-center space-x-2">
+                <div class="status-indicator status-idle" id="statusIndicator"></div>
+                <span class="text-white text-sm" id="statusText">待机中</span>
+            </div>
+        </div>
+        
+        <!-- 时间显示 -->
+        <div class="text-center mb-8">
+            <div class="relative inline-block">
+                <svg class="progress-ring w-48 h-48" id="progressRing">
+                    <circle
+                        cx="96"
+                        cy="96"
+                        r="88"
+                        stroke="rgba(255, 255, 255, 0.1)"
+                        stroke-width="8"
+                        fill="transparent"
+                    />
+                    <circle
+                        cx="96"
+                        cy="96"
+                        r="88"
+                        stroke="url(#gradient)"
+                        stroke-width="8"
+                        fill="transparent"
+                        stroke-dasharray="552.92"
+                        stroke-dashoffset="552.92"
+                        class="progress-ring-circle"
+                        id="progressCircle"
+                    />
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="timer-display text-4xl text-white" id="timerDisplay">00:00:00</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 时间输入 -->
+        <div class="mb-6">
+            <div class="grid grid-cols-3 gap-2 mb-4">
+                <div>
+                    <label class="block text-white text-sm mb-1">小时</label>
+                    <input type="number" id="hours" min="0" max="99" value="0" class="time-input w-full px-3 py-2 rounded-lg text-center">
+                </div>
+                <div>
+                    <label class="block text-white text-sm mb-1">分钟</label>
+                    <input type="number" id="minutes" min="0" max="59" value="0" class="time-input w-full px-3 py-2 rounded-lg text-center">
+                </div>
+                <div>
+                    <label class="block text-white text-sm mb-1">秒</label>
+                    <input type="number" id="seconds" min="0" max="59" value="0" class="time-input w-full px-3 py-2 rounded-lg text-center">
+                </div>
+            </div>
+        </div>
+        
+        <!-- 预设时间 -->
+        <div class="mb-6">
+            <label class="block text-white text-sm mb-2">快速设置</label>
+            <div class="grid grid-cols-2 gap-2">
+                <button class="preset-btn px-3 py-2 rounded-lg text-sm" onclick="setPresetTime(5, 0, 0)">5分钟</button>
+                <button class="preset-btn px-3 py-2 rounded-lg text-sm" onclick="setPresetTime(10, 0, 0)">10分钟</button>
+                <button class="preset-btn px-3 py-2 rounded-lg text-sm" onclick="setPresetTime(15, 0, 0)">15分钟</button>
+                <button class="preset-btn px-3 py-2 rounded-lg text-sm" onclick="setPresetTime(25, 0, 0)">25分钟</button>
+                <button class="preset-btn px-3 py-2 rounded-lg text-sm" onclick="setPresetTime(0, 30, 0)">30秒</button>
+                <button class="preset-btn px-3 py-2 rounded-lg text-sm" onclick="setPresetTime(1, 0, 0)">1小时</button>
+            </div>
+        </div>
+        
+        <!-- 控制按钮 -->
+        <div class="grid grid-cols-3 gap-3">
+            <button class="btn-primary px-4 py-3 rounded-lg font-bold" id="startBtn" onclick="startTimer()">
+                开始
+            </button>
+            <button class="btn-warning px-4 py-3 rounded-lg font-bold" id="pauseBtn" onclick="pauseTimer()" disabled>
+                暂停
+            </button>
+            <button class="btn-secondary px-4 py-3 rounded-lg font-bold" id="resetBtn" onclick="resetTimer()">
+                重置
+            </button>
+        </div>
+    </div>
+    
+    <!-- 通知 -->
+    <div class="notification" id="notification">
+        <div class="flex items-center space-x-2">
+            <span>⏰</span>
+            <span id="notificationText">时间到！</span>
+        </div>
+    </div>
+    
+    <!-- SVG渐变定义 -->
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <script>
+        let timer = null;
+        let totalSeconds = 0;
+        let remainingSeconds = 0;
+        let isRunning = false;
+        let isPaused = false;
+        
+        const timerDisplay = document.getElementById('timerDisplay');
+        const startBtn = document.getElementById('startBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const statusIndicator = document.getElementById('statusIndicator');
+        const statusText = document.getElementById('statusText');
+        const progressCircle = document.getElementById('progressCircle');
+        const notification = document.getElementById('notification');
+        
+        // 创建浮动粒子
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // 设置预设时间
+        function setPresetTime(hours, minutes, seconds) {
+            document.getElementById('hours').value = hours;
+            document.getElementById('minutes').value = minutes;
+            document.getElementById('seconds').value = seconds;
+            updateTimerDisplay();
+        }
+        
+        // 更新计时器显示
+        function updateTimerDisplay() {
+            const hours = Math.floor(remainingSeconds / 3600);
+            const minutes = Math.floor((remainingSeconds % 3600) / 60);
+            const seconds = remainingSeconds % 60;
+            
+            timerDisplay.textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // 更新进度环
+            if (totalSeconds > 0) {
+                const progress = (remainingSeconds / totalSeconds) * 552.92;
+                progressCircle.style.strokeDashoffset = 552.92 - progress;
+            }
+        }
+        
+        // 更新状态
+        function updateStatus(status, text) {
+            statusIndicator.className = `status-indicator ${status}`;
+            statusText.textContent = text;
+        }
+        
+        // 开始计时器
+        function startTimer() {
+            if (!isRunning) {
+                if (!isPaused) {
+                    const hours = parseInt(document.getElementById('hours').value) || 0;
+                    const minutes = parseInt(document.getElementById('minutes').value) || 0;
+                    const seconds = parseInt(document.getElementById('seconds').value) || 0;
+                    
+                    totalSeconds = hours * 3600 + minutes * 60 + seconds;
+                    remainingSeconds = totalSeconds;
+                    
+                    if (totalSeconds === 0) {
+                        showNotification('请设置时间！');
+                        return;
+                    }
+                }
+                
+                isRunning = true;
+                isPaused = false;
+                
+                timer = setInterval(() => {
+                    remainingSeconds--;
+                    updateTimerDisplay();
+                    
+                    if (remainingSeconds <= 0) {
+                        clearInterval(timer);
+                        isRunning = false;
+                        updateStatus('status-finished', '已完成');
+                        showNotification('时间到！');
+                        playAlarm();
+                    }
+                }, 1000);
+                
+                updateStatus('status-running', '运行中');
+                startBtn.disabled = true;
+                pauseBtn.disabled = false;
+            }
+        }
+        
+        // 暂停计时器
+        function pauseTimer() {
+            if (isRunning) {
+                clearInterval(timer);
+                isRunning = false;
+                isPaused = true;
+                updateStatus('status-paused', '已暂停');
+                startBtn.disabled = false;
+                pauseBtn.disabled = true;
+            }
+        }
+        
+        // 重置计时器
+        function resetTimer() {
+            clearInterval(timer);
+            isRunning = false;
+            isPaused = false;
+            remainingSeconds = 0;
+            totalSeconds = 0;
+            
+            document.getElementById('hours').value = 0;
+            document.getElementById('minutes').value = 0;
+            document.getElementById('seconds').value = 0;
+            
+            updateTimerDisplay();
+            updateStatus('status-idle', '待机中');
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+        }
+        
+        // 显示通知
+        function showNotification(message) {
+            document.getElementById('notificationText').textContent = message;
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        // 播放闹钟声音
+        function playAlarm() {
+            // 创建音频上下文播放提示音
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+            oscillator.frequency.setValueAtTime(600, audioContext.currentTime + 0.1);
+            oscillator.frequency.setValueAtTime(800, audioContext.currentTime + 0.2);
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.5);
+        }
+        
+        // 输入框变化时更新显示
+        document.getElementById('hours').addEventListener('input', updateTimerDisplay);
+        document.getElementById('minutes').addEventListener('input', updateTimerDisplay);
+        document.getElementById('seconds').addEventListener('input', updateTimerDisplay);
+        
+        // 初始化
+        createParticles();
+        updateTimerDisplay();
+        
+        // 键盘快捷键
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                if (isRunning) {
+                    pauseTimer();
+                } else {
+                    startTimer();
+                }
+            } else if (e.code === 'Escape') {
+                resetTimer();
+            }
+        });
+    </script>
+</body>
+</html> 
