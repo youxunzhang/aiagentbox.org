@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# 允许所有搜索引擎爬取
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+# 禁止爬取临时文件和备份文件
+Disallow: /.*~
+Disallow: /.*.bak
+Disallow: /.*.tmp
+Disallow: /.*.log
+
+# 禁止爬取管理文件
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+
+# 允许爬取sitemap
+Allow: /sitemap.xml
+Allow: /sitemap.html
+
+# 网站地图位置
+Sitemap: https://aiagentbox.org/sitemap.xml
+
+# 爬取延迟（秒）
+Crawl-delay: 1
