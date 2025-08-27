@@ -6,7 +6,7 @@
     
     <!-- 首页 -->
     <url>
-        <loc>https://aiagentbox.org/</loc>
+        <loc>https://aiagentbox.com/</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
     
     <!-- AI图片处理导航 -->
     <url>
-        <loc>https://aiagentbox.org/img.html</loc>
+        <loc>https://aiagentbox.com/img.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -22,7 +22,7 @@
     
     <!-- AI写作工具 -->
     <url>
-        <loc>https://aiagentbox.org/words.html</loc>
+        <loc>https://aiagentbox.com/words.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -30,7 +30,7 @@
     
     <!-- AI音乐制作 -->
     <url>
-        <loc>https://aiagentbox.org/music.html</loc>
+        <loc>https://aiagentbox.com/music.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -38,7 +38,7 @@
     
     <!-- AI设计工具 -->
     <url>
-        <loc>https://aiagentbox.org/designer.html</loc>
+        <loc>https://aiagentbox.com/designer.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -46,7 +46,7 @@
     
     <!-- AI数字人 -->
     <url>
-        <loc>https://aiagentbox.org/ainum.html</loc>
+        <loc>https://aiagentbox.com/ainum.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -54,7 +54,7 @@
     
     <!-- AI提示词 -->
     <url>
-        <loc>https://aiagentbox.org/aiprompt.html</loc>
+        <loc>https://aiagentbox.com/aiprompt.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -62,7 +62,7 @@
     
     <!-- AI学习工具 -->
     <url>
-        <loc>https://aiagentbox.org/ailearn.html</loc>
+        <loc>https://aiagentbox.com/ailearn.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -70,7 +70,7 @@
     
     <!-- AI办公工具 -->
     <url>
-        <loc>https://aiagentbox.org/aioffice.html</loc>
+        <loc>https://aiagentbox.com/aioffice.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -78,7 +78,7 @@
     
     <!-- AI智能体 -->
     <url>
-        <loc>https://aiagentbox.org/aiagent.html</loc>
+        <loc>https://aiagentbox.com/aiagent.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -86,7 +86,7 @@
     
     <!-- AI社区 -->
     <url>
-        <loc>https://aiagentbox.org/aicommunity.html</loc>
+        <loc>https://aiagentbox.com/aicommunity.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -94,7 +94,7 @@
     
     <!-- AI链接 -->
     <url>
-        <loc>https://aiagentbox.org/ailinks.html</loc>
+        <loc>https://aiagentbox.com/ailinks.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -102,7 +102,7 @@
     
     <!-- 出海工具 -->
     <url>
-        <loc>https://aiagentbox.org/chuhai.html</loc>
+        <loc>https://aiagentbox.com/chuhai.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -110,7 +110,7 @@
     
     <!-- 游戏测试 -->
     <url>
-        <loc>https://aiagentbox.org/gametest.html</loc>
+        <loc>https://aiagentbox.com/gametest.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -118,7 +118,7 @@
     
     <!-- 中国AI -->
     <url>
-        <loc>https://aiagentbox.org/china-ai.html</loc>
+        <loc>https://aiagentbox.com/china-ai.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -126,7 +126,7 @@
     
     <!-- 小红书 -->
     <url>
-        <loc>https://aiagentbox.org/xiaohongshu.html</loc>
+        <loc>https://aiagentbox.com/xiaohongshu.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -134,7 +134,7 @@
     
     <!-- 社交媒体 -->
     <url>
-        <loc>https://aiagentbox.org/social.html</loc>
+        <loc>https://aiagentbox.com/social.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -142,7 +142,7 @@
     
     <!-- SEO工具 -->
     <url>
-        <loc>https://aiagentbox.org/seo.html</loc>
+        <loc>https://aiagentbox.com/seo.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -150,7 +150,7 @@
     
     <!-- 网站地图 -->
     <url>
-        <loc>https://aiagentbox.org/sitemap.html</loc>
+        <loc>https://aiagentbox.com/sitemap.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -158,7 +158,7 @@
     
     <!-- 链接页面 -->
     <url>
-        <loc>https://aiagentbox.org/links.html</loc>
+        <loc>https://aiagentbox.com/links.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -166,7 +166,7 @@
     
     <!-- 祈祷页面 -->
     <url>
-        <loc>https://aiagentbox.org/prayer.html</loc>
+        <loc>https://aiagentbox.com/prayer.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
@@ -174,14 +174,14 @@
     
     <!-- 其他页面 -->
     <url>
-        <loc>https://aiagentbox.org/V1.html</loc>
+        <loc>https://aiagentbox.com/V1.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.4</priority>
     </url>
     
     <url>
-        <loc>https://aiagentbox.org/index-bilingual.html</loc>
+        <loc>https://aiagentbox.com/index-bilingual.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.4</priority>

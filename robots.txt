@@ -33,7 +33,7 @@ Allow: /sitemap.xml
 Allow: /sitemap.html
 
 # 网站地图位置
-Sitemap: https://aiagentbox.org/sitemap.xml
+Sitemap: https://aiagentbox.com/sitemap.xml
 
 # 爬取延迟（秒）
 Crawl-delay: 1
