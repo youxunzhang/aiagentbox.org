@@ -186,6 +186,57 @@
     
     <!-- 外部资源 -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 自定义样式 -->
+    <style>
+        /* AI工具LOGO样式优化 */
+        .tool-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        /* 工具卡片悬停效果 */
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tool-card:hover .tool-logo {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 响应式LOGO尺寸 */
+        @media (max-width: 768px) {
+            .tool-logo {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tool-logo {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
 </head>
 <body class="min-h-screen">
     <!-- Header -->
@@ -277,11 +328,7 @@
     <!-- Hero Section -->
     <section class="hero-section py-12 mb-8">
         <div class="container mx-auto px-4 text-center">
-            <!-- 装饰性几何图形 -->
-            <div class="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-20 pulse-animation"></div>
-            <div class="absolute top-20 right-20 w-16 h-16 bg-gradient-to-r from-pink-400 to-cyan-500 rounded-full opacity-20 pulse-animation" style="animation-delay: 1s;"></div>
-            <div class="absolute bottom-10 left-20 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-20 pulse-animation" style="animation-delay: 2s;"></div>
-            <div class="absolute bottom-20 right-10 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 pulse-animation" style="animation-delay: 0.5s;"></div>
+
             
             <h1 class="gradient-text text-5xl md:text-7xl font-bold mb-6 leading-tight" data-text="AI工具导航">
                 AI工具导航
@@ -326,7 +373,7 @@
             
 
         <!-- 大模型 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-大模型 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     🤖 大模型
@@ -400,7 +447,7 @@
         </section>
 
         <!-- 国产AI产品 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-国产AI产品 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     🇨🇳 国产AI产品
@@ -510,7 +557,7 @@
         </section>
 
         <!-- 聊天模型 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-聊天模型 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     💬 聊天模型
@@ -540,7 +587,7 @@
         </section>
 
         <!-- 聚合模型 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-聚合模型 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     🔗 聚合模型
@@ -712,7 +759,7 @@
         </section>
 
         <!-- 图片处理 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-图片处理 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     🎨 图片处理
@@ -756,7 +803,7 @@
                 </a>
                 <a href="https://unsplash.com/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));">📸</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #06B6D4, #3B82F6);">📸</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">Unsplash</h3>
                             <p class="text-gray-600 text-sm">高质量图片素材</p>
@@ -785,7 +832,7 @@
         </section>
 
         <!-- 视频处理 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-视频处理 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     🎬 视频处理
@@ -867,7 +914,7 @@
         </section>
 
         <!-- 声音处理 -->
-        <section class="mb-12 fade-in">
+        <section class="mb-12">
             <h2 class="category-header category-声音处理 text-2xl font-bold p-4 rounded-t-2xl mb-0">
                 🎵 声音处理
             </h2>
@@ -912,7 +959,7 @@
         </section>
 
         <!-- 编程 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-编程 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     💻 编程
@@ -994,7 +1041,7 @@
         </section>
 
         <!-- 网站服务 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-网站 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     🌐 网站服务
@@ -1103,7 +1150,7 @@
         </section>
 
         <!-- 社交媒体 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-社交媒体 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     📱 社交媒体
