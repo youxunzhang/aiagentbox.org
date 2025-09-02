@@ -1232,7 +1232,7 @@
         </section>
 
         <!-- 其他常用 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-其他常用 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     🔧 其他常用
@@ -1431,7 +1431,7 @@
         </section>
 
         <!-- 数据分析 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-数据分析 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     📊 数据分析
@@ -1477,7 +1477,7 @@
         </section>
 
         <!-- 资讯板块 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <h2 class="category-header category-资讯 text-2xl font-bold p-6 rounded-t-2xl mb-0">
                     📰 资讯动态
@@ -1569,7 +1569,7 @@
         </section>
         
         <!-- FAQ常见问题解答 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <div class="p-8">
                     <h2 class="text-3xl font-bold text-center mb-8 gradient-text">常见问题解答 (FAQ)</h2>
@@ -1640,7 +1640,7 @@
         </section>
         
         <!-- 联系我们 -->
-        <section class="mb-16 fade-in">
+        <section class="mb-16">
             <div class="section-container overflow-hidden">
                 <div class="p-8 text-center">
                     <h2 class="text-3xl font-bold mb-6 gradient-text">联系我们</h2>
@@ -1947,52 +1947,11 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    
-                    // 添加额外的动画效果
-                    if (entry.target.classList.contains('tool-card')) {
-                        entry.target.style.animationDelay = Math.random() * 0.5 + 's';
-                    }
-                }
-            });
-        }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
+
+
         
-        // 鼠标跟随效果
-        document.addEventListener('mousemove', (e) => {
-            const cursor = document.createElement('div');
-            cursor.className = 'cursor-trail';
-            cursor.style.cssText = `
-                position: fixed;
-                width: 6px;
-                height: 6px;
-                background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 9999;
-                left: ${e.clientX - 3}px;
-                top: ${e.clientY - 3}px;
-                opacity: 0.7;
-                transition: all 0.1s ease;
-            `;
-            document.body.appendChild(cursor);
-            
-            setTimeout(() => {
-                cursor.style.opacity = '0';
-                cursor.style.transform = 'scale(0)';
-                setTimeout(() => cursor.remove(), 200);
-            }, 100);
-        });
+
 
         // 移动端菜单功能
         const mobileMenuButton = document.getElementById('mobileMenuButton');
