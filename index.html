@@ -186,12 +186,8 @@
     
     <!-- 外部资源 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body class="min-h-screen">
-    <!-- 粒子效果容器 -->
-    <div id="particles-js"></div>
-    
     <!-- Header -->
     <header class="glass-effect sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4">
@@ -228,11 +224,19 @@
                     <a href="seo.html" class="nav-link text-sm font-semibold">SEO工具</a>
                     <a href="sitemap.html" class="nav-link text-sm font-semibold">网站地图</a>
                 </div>
-                <button class="mobile-menu-button md:hidden" id="mobileMenuButton">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                
+                <!-- 收藏按钮 -->
+                <div class="flex items-center space-x-4">
+                    <button id="bookmarkBtn" class="bookmark-btn hidden md:flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                        <span class="text-lg">🔖</span>
+                        <span class="text-sm font-semibold">收藏</span>
+                    </button>
+                    <button class="mobile-menu-button md:hidden" id="mobileMenuButton">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -240,6 +244,14 @@
     <!-- Mobile Navigation -->
     <nav class="mobile-nav" id="mobileNav">
         <div class="mobile-nav-content">
+            <!-- 移动端收藏按钮 -->
+            <div class="mb-6 p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
+                <button id="mobileBookmarkBtn" class="w-full flex items-center justify-center space-x-3 py-3 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                    <span class="text-xl">🔖</span>
+                    <span>收藏网站</span>
+                </button>
+            </div>
+            
             <a href="index.html" onclick="closeMobileMenu()">首页</a>
             <a href="img.html" onclick="closeMobileMenu()">AI图片</a>
             
@@ -312,36 +324,7 @@
                 <h2 class="sr-only">AI工具导航 - 人工智能工具集合</h2>
             </header>
             
-            <!-- 详细介绍部分 -->
-            <section class="mb-16 fade-in">
-                <div class="section-container overflow-hidden">
-                    <div class="p-8">
-                        <h2 class="text-3xl font-bold text-center mb-8 gradient-text">为什么选择AI工具导航？</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div>
-                                <h3 class="text-xl font-semibold mb-4 text-gray-800">🎯 最全面的AI工具集合</h3>
-                                <p class="text-gray-600 mb-4">我们精心收集了1000+款优质AI工具，涵盖AI写作、AI绘画、AI视频、AI音频、AI办公、AI学习、AI设计、AI编程等各个领域。无论您是学生、职场人士、设计师还是开发者，都能在这里找到适合的AI助手。</p>
-                                <ul class="text-gray-600 space-y-2">
-                                    <li>• ChatGPT、Claude、Gemini等主流大模型</li>
-                                    <li>• Midjourney、DALL-E、Stable Diffusion等AI绘画工具</li>
-                                    <li>• Runway、Pika、HeyGen等AI视频工具</li>
-                                    <li>• 文心一言、通义千问等国产AI产品</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-4 text-gray-800">⚡ 免费工具优先推荐</h3>
-                                <p class="text-gray-600 mb-4">我们深知用户对免费工具的需求，因此优先推荐免费且实用的AI工具。每个工具都经过严格筛选，确保质量可靠，让您无需付费即可体验AI的强大功能。</p>
-                                <ul class="text-gray-600 space-y-2">
-                                    <li>• 免费AI写作工具推荐</li>
-                                    <li>• 免费AI图片生成工具</li>
-                                    <li>• 免费AI视频制作工具</li>
-                                    <li>• 免费AI办公助手</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
         <!-- 大模型 -->
         <section class="mb-16 fade-in">
             <div class="section-container overflow-hidden">
@@ -351,7 +334,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-8">
                 <a href="https://www.doubao.com/chat/" target="_blank"  class="tool-card p-6 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-blue), var(--neon-cyan));">豆</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">🫘</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">豆包</h3>
                             <p class="text-gray-600 text-sm">字节跳动AI对话助手</p>
@@ -360,7 +343,7 @@
                 </a>
                 <a href="https://chat.deepseek.com/" target="_blank"  class="tool-card p-6 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));">D</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">🔍</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">Deepseek</h3>
                             <p class="text-gray-600 text-sm">深度学习对话模型</p>
@@ -369,7 +352,7 @@
                 </a>
                 <a href="https://gemini.google.com/app" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));">G</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #4285F4, #34A853);">🌐</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">谷歌Gemini</h3>
                             <p class="text-gray-600 text-sm">Google最新AI助手</p>
@@ -379,7 +362,7 @@
                 
                 <a href="https://www.perplexity.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));">P</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #EC4899, #8B5CF6);">💡</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">perplexity</h3>
                             <p class="text-gray-600 text-sm">智能搜索引擎</p>
@@ -388,7 +371,7 @@
                 </a>
                 <a href="https://chat.chatbot.app/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));">🤖</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #10B981, #8B5CF6);">🤖</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">Ghat gpt4o</h3>
                             <p class="text-gray-600 text-sm">GPT-4o多模态AI助手</p>
@@ -397,7 +380,7 @@
                 </a>
                 <a href="https://claude.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));">🧠</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #F59E0B, #06B6D4);">🧠</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">Claude</h3>
                             <p class="text-gray-600 text-sm">Anthropic AI助手</p>
@@ -406,7 +389,7 @@
                 </a>
                 <a href="https://x.ai/" target="_blank"  class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                     <div class="tool-card-header">
-                        <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));">🚀</div>
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #EF4444, #8B5CF6);">🚀</div>
                         <div class="tool-card-content">
                             <h3 class="font-semibold text-lg mb-2">Grok</h3>
                             <p class="text-gray-600 text-sm">X.AI对话助手</p>
@@ -425,7 +408,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
                     <a href="https://www.jimmeng.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">即</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">💭</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">即梦</h3>
                                 <p class="text-gray-600 text-sm">国产AI对话助手</p>
@@ -435,7 +418,7 @@
                     
                     <a href="https://www.keling.ai/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">可</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">✨</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">可灵</h3>
                                 <p class="text-gray-600 text-sm">智能AI助手平台</p>
@@ -445,7 +428,7 @@
                     
                     <a href="https://chatglm.cn/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #A8E6CF, #7FCDCD);">智</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #A8E6CF, #7FCDCD);">🧠</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">智谱AI</h3>
                                 <p class="text-gray-600 text-sm">ChatGLM对话模型</p>
@@ -455,7 +438,7 @@
                     
                     <a href="https://yiyan.baidu.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #2932E1, #1E40AF);">文</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #2932E1, #1E40AF);">📝</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">文心一言</h3>
                                 <p class="text-gray-600 text-sm">百度AI对话助手</p>
@@ -465,7 +448,7 @@
                     
                     <a href="https://tongyi.aliyun.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B35, #F7931E);">通</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B35, #F7931E);">🔗</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">通义千问</h3>
                                 <p class="text-gray-600 text-sm">阿里云AI助手</p>
@@ -475,7 +458,7 @@
                     
                     <a href="https://xingye.tencent.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #00A651, #008F3A);">星</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #00A651, #008F3A);">⭐</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">星野</h3>
                                 <p class="text-gray-600 text-sm">腾讯AI对话助手</p>
@@ -485,7 +468,7 @@
                     
                     <a href="https://www.moonshot.cn/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #667eea, #764ba2);">月</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #667eea, #764ba2);">🌙</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">月之暗面</h3>
                                 <p class="text-gray-600 text-sm">Kimi智能助手</p>
@@ -495,7 +478,7 @@
                     
                     <a href="https://www.doubao.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">豆</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">🫘</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">豆包</h3>
                                 <p class="text-gray-600 text-sm">字节跳动AI助手</p>
@@ -505,7 +488,7 @@
                     
                     <a href="https://www.360.cn/ai/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #00C851, #007E33);">智</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #00C851, #007E33);">🛡️</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">360智脑</h3>
                                 <p class="text-gray-600 text-sm">360AI智能助手</p>
@@ -515,7 +498,7 @@
                     
                     <a href="https://www.xfyun.cn/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">讯</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">🎤</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">讯飞星火</h3>
                                 <p class="text-gray-600 text-sm">科大讯飞AI助手</p>
@@ -535,7 +518,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-8">
                     <a href="https://venice.ai/chat" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));">🏛️</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #3B82F6, #8B5CF6);">🏛️</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">Venice AI</h3>
                                 <p class="text-gray-600 text-sm">智能聊天助手</p>
@@ -545,7 +528,7 @@
                     
                     <a href="https://t3.chat/chat" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));">💭</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #EC4899, #06B6D4);">💭</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">T3 Chat</h3>
                                 <p class="text-gray-600 text-sm">AI对话平台</p>
@@ -595,7 +578,7 @@
                     
                     <a href="https://gumroad.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #F59E0B, #D97706);">G</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #F59E0B, #D97706);">🛒</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">Gumroad</h3>
                                 <p class="text-gray-600 text-sm">数字产品销售平台</p>
@@ -605,7 +588,7 @@
                     
                     <a href="https://uspto.report/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #EF4444, #DC2626);">U</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #EF4444, #DC2626);">📋</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">USPTO Report</h3>
                                 <p class="text-gray-600 text-sm">专利信息查询平台</p>
@@ -615,7 +598,7 @@
                     
                     <a href="https://myiq.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #06B6D4, #0891B2);">M</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #06B6D4, #0891B2);">🧠</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">MyIQ</h3>
                                 <p class="text-gray-600 text-sm">智能问答平台</p>
@@ -625,7 +608,7 @@
                     
                     <a href="https://quizdays.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #EC4899, #DB2777);">Q</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #EC4899, #DB2777);">❓</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">QuizDays</h3>
                                 <p class="text-gray-600 text-sm">每日问答平台</p>
@@ -635,7 +618,7 @@
                     
                     <a href="https://sendtheprayer.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">S</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">🙏</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">SendThePrayer</h3>
                                 <p class="text-gray-600 text-sm">祈祷分享平台</p>
@@ -647,7 +630,7 @@
                     
                     <a href="https://sidekicker.ai/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #3B82F6, #1D4ED8);">S</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #3B82F6, #1D4ED8);">🤝</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">Sidekicker AI</h3>
                                 <p class="text-gray-600 text-sm">AI助手平台</p>
@@ -657,7 +640,7 @@
                     
                     <a href="https://yoprintables.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #F59E0B, #D97706);">Y</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #F59E0B, #D97706);">🖨️</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">YoPrintables</h3>
                                 <p class="text-gray-600 text-sm">可打印资源平台</p>
@@ -667,7 +650,7 @@
                     
                     <a href="https://www.thiings.co/things" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #EF4444, #DC2626);">T</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #EF4444, #DC2626);">🎨</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">Thiings</h3>
                                 <p class="text-gray-600 text-sm">创意物品分享平台</p>
@@ -677,7 +660,7 @@
                     
                     <a href="https://wavespeed.ai/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #06B6D4, #0891B2);">W</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #06B6D4, #0891B2);">⚡</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">WaveSpeed AI</h3>
                                 <p class="text-gray-600 text-sm">AI加速平台</p>
@@ -687,7 +670,7 @@
                     
                     <a href="https://vheer.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">V</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">🎯</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">Vheer</h3>
                                 <p class="text-gray-600 text-sm">创意工具平台</p>
@@ -697,7 +680,7 @@
                     
                     <a href="https://juicy.bio/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #EC4899, #DB2777);">J</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #EC4899, #DB2777);">🧬</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">Juicy Bio</h3>
                                 <p class="text-gray-600 text-sm">生物信息平台</p>
@@ -707,7 +690,7 @@
                     
                     <a href="https://inststoryviewer.com/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #E4405F, #C13584);">I</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #E4405F, #C13584);">📱</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">InstStoryViewer</h3>
                                 <p class="text-gray-600 text-sm">Instagram故事查看器</p>
@@ -717,7 +700,7 @@
                     
                     <a href="https://mp3dl.to/" target="_blank" class="tool-card p-4 rounded-xl hover:shadow-lg transition-all">
                         <div class="tool-card-header">
-                            <div class="tool-logo" style="background: linear-gradient(135deg, #10B981, #059669);">M</div>
+                            <div class="tool-logo" style="background: linear-gradient(135deg, #10B981, #059669);">🎵</div>
                             <div class="tool-card-content">
                                 <h3 class="font-semibold text-lg mb-2">MP3DL</h3>
                                 <p class="text-gray-600 text-sm">音乐下载平台</p>
@@ -2020,6 +2003,62 @@
                     closeMobileMenu();
                 }
             }
+        }
+
+        // 收藏功能
+        function addToBookmarks() {
+            const url = window.location.href;
+            const title = document.title;
+            
+            if (window.sidebar && window.sidebar.addPanel) {
+                // Mozilla Firefox
+                window.sidebar.addPanel(title, url, '');
+            } else if (window.external && ('AddFavorite' in window.external)) {
+                // Internet Explorer
+                window.external.AddFavorite(url, title);
+            } else {
+                // 其他浏览器 - 显示提示
+                showBookmarkMessage();
+            }
+        }
+
+        function showBookmarkMessage() {
+            // 创建提示消息
+            const message = document.createElement('div');
+            message.className = 'bookmark-message fixed top-20 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300';
+            message.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <span class="text-xl">🔖</span>
+                    <div>
+                        <p class="font-semibold">收藏提示</p>
+                        <p class="text-sm opacity-90">请按 Ctrl+D (Windows) 或 Cmd+D (Mac) 收藏此页</p>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(message);
+            
+            // 3秒后自动消失
+            setTimeout(() => {
+                message.style.transform = 'translateX(100%)';
+                message.style.opacity = '0';
+                setTimeout(() => message.remove(), 300);
+            }, 3000);
+        }
+
+        // 绑定收藏按钮事件
+        const bookmarkBtn = document.getElementById('bookmarkBtn');
+        const mobileBookmarkBtn = document.getElementById('mobileBookmarkBtn');
+        
+        if (bookmarkBtn) {
+            bookmarkBtn.addEventListener('click', addToBookmarks);
+        }
+        
+        if (mobileBookmarkBtn) {
+            mobileBookmarkBtn.addEventListener('click', () => {
+                addToBookmarks();
+                closeMobileMenu(); // 点击后关闭移动菜单
+            });
         }
     </script>
 </body>
