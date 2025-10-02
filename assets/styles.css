@@ -380,6 +380,146 @@ img {
   font-weight: 700;
 }
 
+.links-hero {
+  padding: 140px 0 100px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 116, 144, 0.1));
+  text-align: center;
+}
+
+.links-hero .container {
+  max-width: 780px;
+}
+
+.links-hero h1 {
+  margin: 20px 0 18px;
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.links-hero .lead {
+  margin: 0 auto 32px;
+  color: var(--color-muted);
+}
+
+.links-anchors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.section-head--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links-group {
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 32px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.links-group:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.links-group__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.links-group__header i {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+.links-group__header h3 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.links-group__header p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.platform-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.platform-grid--three {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.platform-grid--four {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.platform-card {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  padding: 20px;
+  background: rgba(248, 250, 252, 0.6);
+  display: grid;
+  gap: 10px;
+  height: 100%;
+}
+
+.platform-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.platform-link {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.platform-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.platform-meta {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.platform-note {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .links-hero {
+    padding: 120px 0 80px;
+  }
+
+  .links-group {
+    padding: 28px 24px;
+  }
+
+  .links-group__header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .links-group__header i {
+    margin-top: 0;
+  }
+}
+
 .resource-grid {
   display: grid;
   gap: 28px;
